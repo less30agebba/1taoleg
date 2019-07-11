@@ -1,0 +1,133 @@
+/*  帮助部分开始 */
+.helpmain { overflow:auto;
+ height: auto; font-family:"微软雅黑";
+ width: 1199px;
+ margin:15px 0 0 0;
+ padding:0;}
+.helpmain .helpleft{ width:200px;float:left;}
+.helpmain .helpleft .helpleft1{width:200px; border: 1px solid #ddd; background-color:#FFFFFF; overflow:auto;}
+.helpmain .helpleft .helpleft2{width:200px; border: 1px solid #ddd; background-color:#FFFFFF; overflow:auto; margin:10px 0 0 0; }
+.helpmain .helpleft .helpleft2 .help_txt{
+	clear: both;
+	line-height:22px;
+	width:165px;
+	color:#999999;
+	height:47px;
+	margin:0 0 0 15px;
+	padding:10px 0 0 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E6E6E6;
+}
+.helpmain .helpleft .helpleft2 .help_txt p{ margin:0 0 0 5px;}
+.helpmain .helpleft .helpleft2 .help_txt span { font-size:16px; color:#FF3300; font-weight:bold; }
+.helpmain .helpleft .helpleft2 .help_txt .help_txt_jy{  font-size:12px; color:#FF3300; font-weight:normal;}
+.helpmain .helpleft .helpmenu{ width:200px; margin:0; }
+.helpmain .helpleft .helpmenu .helpmenu_bt{ width:200px; height:37px;background:#f2f2f2; padding:0; margin:0; overflow:hidden;}
+.helpmain .helpleft .helpmenu .helpmenu_bt .helpmenu_bt_font{ font-size:16px; font-weight:bold; line-height:37px;  color:#656565; width:100px;  float:left; padding:0; text-align:center;}
+.helpmain .helpleft .helpmenu ul{}
+.helpmain .helpleft .helpmenu .helpmenu_a{ float:left; padding:0;}
+.helpmain .helpleft .helpmenu li{ height:35px; line-height:35px; margin:0 0 0 25px; padding:0; float:left; width:160px; display:inline;}
+.helpmain .helpleft .helpmenu li:hover{background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -60px;}
+.helpmain .helpleft .helpmenu li a{ font-size:14px;}
+
+.helpmain .helpright{ width:980px;  float:right;border: 1px solid #ddd; background-color:#FFFFFF; margin-left:10px;}
+.help_right .help_search { width:940px;}
+.vv{width:940px;margin-top:20px; height:60px; overflow:hidden; }
+.vv a{ float:left; font-size:16px;-webkit-border-radius:4px;border-radius:4px;white-space:nowrap;height:40px;line-height:40px;margin-left:25px;margin-right:12px;margin-bottom:-5px;padding:0 15px;color:#666666;background:#fff;border:1px solid #ddd;}
+.vv a:hover{border:1px solid #FF5151;color:#fff;background:#FF6699;}
+.vv a.active{color:#ffffff;background:#ff8cb5;border-color:#ff81ad;}
+.vv a.active:hover{color:#ffffff;}
+.helpsearchkang{ background-color:#ffffff;border: 1px solid #D5D5D5; width:400px; height:25px; line-height:25px; color:#999999; margin:8px 20px 0 0;}
+.helpsearchbt{ width:93px; height:28px; background-image:url(../images/so.png); border:0; vertical-align:bottom; }
+.helpmain .helpright .helpright_help{ width:960px; margin:0px 0 0 10px; overflow:auto;}
+
+.help_s_list {
+	padding: 0 10px ;
+}
+
+.help-link {
+	position:relative;
+	width: 338px;
+	height: 118px;
+	float: left;
+	margin: 0 10px;
+}
+
+.bg-tao-help {margin-left:50px; margin-right:100px;
+	background: url("../images/help-1.jpg") no-repeat scroll 0 0 transparent;
+}
+
+.bg-mall-help {
+	background: url("../images/help-4.jpg") no-repeat scroll 0 0 transparent;
+}
+
+.help-link a{
+	position: absolute;
+	display: block;
+	right: 80px;
+    top: 70px;
+}
+.helpmain .helpright .helpright_wenti{ width:940px;border: 1px dashed #FFC1E0; border-radius:8px 8px 8px 8px;background-color:#FFF7FB; margin:10px 0 0 20px; overflow:auto;}
+.helpmain .helpright .helpright_wenti h3 { margin:15px 0 10px 20px; font-size:18px;}
+.helpmain .helpright .helpright_wenti ul { width:940px; margin:0 0 20px 0;}
+.helpmain .helpright .helpright_wenti ul li{
+	width:440px;
+	margin:0 0 0 20px;
+	float:left;
+	height:35px;
+	line-height:35px;
+	display:inline;
+	background-image:url(../images/help_back.gif);
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.helpmain .helpright .helpright_wenti ul li a{ font-size:14px; color:#666;margin:0 0 0 10px;}
+.helpmain .helpright  .helpright_help{width:940px; margin:20px 0 10px 20px; }
+.helpmain .helpright  .helpright_help .helpright_help_qa{  clear:both; }
+.helpmain .helpright  .helpright_help .helpright_help_qa_q{ margin:0;height:40px;font-size:16px;  color:#ff6699; line-height:40px;background:#FFF7FB; width:940px; clear:both;}
+.helpmain .helpright  .helpright_help .helpright_help_qa_q p { float:left;}
+.helpmain .helpright  .helpright_help .helpright_help_qa_a{ margin:10px 0 15px 0;font-size:14px; line-height:27px; width:892px; float:right;}
+/*  帮助部分结束 */
+
+.adminmenu_dindan{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -16px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_chaxun{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-21px -16px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_fucha{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-40px -16px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_wenti{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-63px -16px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_tixian{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-83px -16px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_fanli{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_jifen{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-23px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_quan{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-42px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_jilu{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-62px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+ .adminmenu_shouchang{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-82px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_message{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-103px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_tong{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-126px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_bangdin{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-149px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_dizhi{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-171px -37px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_tixing{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-130px 0px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_xugai{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-150px 0px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_anquan{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-170px 0px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_geren{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-85px -96px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_zhannei{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-106px -96px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_haoyou{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-129px -96px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_hongbao{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-150px -96px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_fenxiang{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-173px -96px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_kuaidi{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-86px -117px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_guibin{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-106px -117px; float:left; margin:7px 5px 0 0; display:inline;}
+.adminmenu_lianmen{ width:20px; height:20px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-129px -117px; float:left; margin:7px 5px 0 0; display:inline;}
+.help_kf{ width:101px; height:26px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -238px; float:left; margin:15px 5px 0 15px; display:inline;}
+.help_kftel{ width:17px; height:16px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-87px -141px; float:left; margin:2px 2px 0 5px; display:inline;}
+.help_jy{ width:19px; height:17px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-108px -141px; float:left; margin:2px 2px 0 5px; display:inline;}
+
+.tubiao_ask{width:16px; height:16px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-74px 0px;margin:12px 15px 0 15px; float:left;display: inline; cursor:pointer;}
+.tubiao_answer{width:16px; height:16px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-91px 0px;margin:16px 15px 0 15px; float:left;display: inline; cursor:pointer;}
+.tubiao_closew{width:13px; height:13px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-56px -1px;margin:8px 8px 0 0; float:right;display: inline; cursor:pointer;}
+.tubiao_shezhi{width:78px; height:25px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -97px;margin:8px 3px 0 0; float:right;display: block; cursor:pointer;}
+.tubiao_bangdin{width:78px; height:25px;background:url(../images/admin.png); backg
+round-repeat:no-repeat; background-position:0px -123px;margin:8px 3px 0 0; float:right;display: block; cursor:pointer;}
+.tubiao_yanzhen{width:78px; height:25px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px -149px;margin:8px 3px 0 0; float:right;display: block; cursor:pointer;}
+.tubiao_tishi{ width:20px; height:20px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-168px -70px;margin:18px 3px 0 15px; float:left;display:inline;}
+.gonggaotubiao{ width:18px; height:18px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-109px 0px;margin:7px 3px 0 15px; float:left; display:inline;}
+.tishitubiao{ width:18px; height:18px;background:url(../images/admin.png); background-repeat:no-repeat; background-position:-32px 0px;margin:7px 3px 0 15px; float:left; display:inline;}
+.tree_close{ width:11px; height:13px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:0px 0px; display:inline; float:right; margin:10px 10px 0 0 ;}
+.tree_on{ width:11px; height:13px; background:url(../images/admin.png); background-repeat:no-repeat; background-position:-13px 0px; display:inline; float:right; margin:10px 8px 0 0 ;}

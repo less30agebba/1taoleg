@@ -1,0 +1,1 @@
+<?php exit;?>{"time":1562577665,"code":"ca4dmwq75OHsFjbTiBdTHPQkvTUFhawqvA\/V3kaEWILFg32Y+gVn9QVRVAORluftDFb1EtYcyngCb13v94L1zwmjsU5uf0jTdXG5\/DFoARlKJVxxAFHu4BPC2z9fOmiDP\/0WOXfIpIXdE1DBdwx+aPtcD7\/PgkrloNTSg4MpMBuUr1E+PqCt4HJwLQJE9p7c2SSGUvSycmgJgp4X6RU8T9jbzg4Lsz2q9eHG874JBC\/TmhHFttxqlR3xsBWwGiBLGdVr"}

@@ -1,0 +1,140 @@
+/* * 全部奖品列表页 * Author Cloud * CreateDate 2014-07-21 * Copyright:1997-2014 Netease Inc. All rights reserved. */ 
+.m-list {
+}
+.m-list .g-body-hd {
+	position: relative;
+	z-index:2;
+}
+.m-list-nav {
+	background-color: #fff;
+	border-bottom: 1px solid #e9e9e9;
+}
+.m-list-nav a {
+	color: #333;
+}
+
+.m-list-nav-catlog {
+	float: left;
+	width: 24%;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	    border-right: 1px solid #e9e9e9;
+}
+.m-list-nav-catlog a {
+	display: block;
+
+}
+.m-list-nav-catlog a span{
+		line-height: 34px;
+		font-size:1.3rem;
+	}
+.m-list-nav-catlog .open {
+	height: 34px;
+	line-height: 34px;
+	background: #fff;
+}
+.m-list-nav-catlog .ico-arrow-down {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+}
+.m-list-nav-catlog .open .ico-arrow-down {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+}
+.ico-arrow-s-gray {
+    width: 3px;
+    height: 3px;
+    border-width: 2px;
+    border-color: #9a9a9a;
+}
+.ico-arrow {
+    border-width: 1px;
+    border-style: solid;
+    border-top: 0;
+    border-right: 0;
+    background: none;
+}
+.m-list-nav-catlog .ico {
+	margin-left: 4px;
+	margin-top: -2px;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-ms-transition: all .3s;
+	display:inline-block;
+	vertical-align:middle;
+}
+.m-list-types {
+	padding-left: 88px;
+	height: 34px;
+	position: relative;
+	overflow: hidden;
+}
+.m-list-types-list {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+}
+.m-list-types-list li {
+	float: left;
+    border-right: 1px solid #e9e9e9;
+	width:24%;
+	text-align:center;
+}
+.m-list-types-list li a {
+	display: inline-block;
+	font-size:1.3rem;
+		line-height: 34px;
+}
+
+.m-list-types .ico {
+	margin-top: -4px;
+	margin-left: 3px;
+}
+.m-list-nav .selected .ico-arrow {
+	border-color: #db3625
+}
+.m-list-nav .selected.up .ico-sort2Arrow:before {
+	border-color: #db3625
+}
+.m-list-nav .selected.down .ico-sort2Arrow:after {
+	border-color: #db3625
+}
+.m-list-catlog {
+	position: absolute;
+	left: 0;
+	top: 35px;
+	width: 100%;
+	background-color: #fff;
+}
+.m-list-catlog-list {
+	padding: 0 10px;
+}
+.m-list-catlog-list li {
+	float: left;
+	width: 25%;
+	line-height: 35px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.m-list-catlog-list li a {
+	padding-left: 10px;
+	display: inline-block;
+	font-size:1.3rem;
+	color:#666;
+}
+.m-list-catlog-list .ico-type {
+	margin-top: -2px;
+	margin-right: 5px;
+}
+.m-list-total {
+	text-align: center;
+	line-height: 30px;
+	color: #8f8f8f;
+	border-bottom: 1px solid #dcdcdc;
+}

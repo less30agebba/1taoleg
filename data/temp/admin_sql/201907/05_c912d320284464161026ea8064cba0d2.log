@@ -1,0 +1,87 @@
+120.32.54.155-----set names utf8-----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=1 or type=0 -----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=2 -----00:27:43
+120.32.54.155-----select val from duoduo_webset where var="authorize" limit 1-----00:27:43
+120.32.54.155-----select * from duoduo_duoduo2010 where adminname="南客" and adminpass="b980bc2f33a155c31a5b5e787587976e" limit 1-----00:27:43
+120.32.54.155-----select a.id from duoduo_menu as a,duoduo_menu_access as b where a.`mod`="webset" and a.`act`="center" and a.id=b.menu_id and b.role_id="7" limit 1-----00:27:43
+120.32.54.155-----select a.* from duoduo_menu as a,duoduo_menu_access as b where a.id=b.menu_id and b.role_id='7' and a.mod<>'fun' order by a.listorder desc,a.sort desc,a.id asc-----00:27:43
+120.32.54.155-----set names utf8-----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=1 or type=0 -----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=2 -----00:27:43
+120.32.54.155-----select val from duoduo_webset where var="authorize" limit 1-----00:27:43
+120.32.54.155-----select * from duoduo_duoduo2010 where adminname="南客" and adminpass="b980bc2f33a155c31a5b5e787587976e" limit 1-----00:27:43
+120.32.54.155-----select a.id from duoduo_menu as a,duoduo_menu_access as b where a.`mod`="webset" and a.`act`="center" and a.id=b.menu_id and b.role_id="7" limit 1-----00:27:43
+120.32.54.155-----select a.* from duoduo_menu as a,duoduo_menu_access as b where a.id=b.menu_id and b.role_id='7' and a.mod<>'fun' order by a.listorder desc,a.sort desc,a.id asc-----00:27:43
+120.32.54.155-----select * from duoduo_duoduo2010 where id="5" limit 1-----00:27:43
+120.32.54.155-----set names utf8-----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=1 or type=0 -----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=2 -----00:27:43
+120.32.54.155-----select val from duoduo_webset where var="authorize" limit 1-----00:27:43
+120.32.54.155-----select * from duoduo_duoduo2010 where adminname="南客" and adminpass="b980bc2f33a155c31a5b5e787587976e" limit 1-----00:27:43
+120.32.54.155-----select a.id from duoduo_menu as a,duoduo_menu_access as b where a.`mod`="webset" and a.`act`="center" and a.id=b.menu_id and b.role_id="7" limit 1-----00:27:43
+120.32.54.155-----select a.* from duoduo_menu as a,duoduo_menu_access as b where a.id=b.menu_id and b.role_id='7' and a.mod<>'fun' order by a.listorder desc,a.sort desc,a.id asc-----00:27:43
+120.32.54.155-----set names utf8-----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=1 or type=0 -----00:27:43
+120.32.54.155-----select * from duoduo_webset where type=2 -----00:27:43
+120.32.54.155-----select val from duoduo_webset where var="authorize" limit 1-----00:27:43
+120.32.54.155-----select * from duoduo_duoduo2010 where adminname="南客" and adminpass="b980bc2f33a155c31a5b5e787587976e" limit 1-----00:27:43
+120.32.54.155-----select a.id from duoduo_menu as a,duoduo_menu_access as b where a.`mod`="webset" and a.`act`="center" and a.id=b.menu_id and b.role_id="7" limit 1-----00:27:43
+120.32.54.155-----select a.* from duoduo_menu as a,duoduo_menu_access as b where a.id=b.menu_id and b.role_id='7' and a.mod<>'fun' order by a.listorder desc,a.sort desc,a.id asc-----00:27:43
+120.32.54.155-----select id from duoduo_mall where 1 limit 1-----00:27:43
+120.32.54.155-----select * from duoduo_domain where `mod`="goods" and close=0 limit 1-----00:27:43
+120.32.54.155-----ALTER TABLE `duoduo_goods` CHANGE `tg_url` `tg_url` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;-----00:27:43
+120.32.54.155-----ALTER TABLE  `duoduo_goods` CHANGE  `nick`  `nick` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL-----00:27:43
+120.32.54.155-----ALTER TABLE `duoduo_mall` ADD `is_search` tinyint(1) DEFAULT '0'-----00:27:43
+120.32.54.155-----select * from duoduo_adminlog where 1=1 order by id desc limit 5 -----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_tradelist where checked=1-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_msg where see=0 and uid=0-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_duihuan where status=0-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_tixian where status=0-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_hezuo where status=0-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_baobei where status=2-----00:27:43
+120.32.54.155-----select sum(money) as sum from duoduo_tixian where type=1 and status=1 and dotime >= "1562256000" and dotime < "1562342399"-----00:27:43
+120.32.54.155-----select sum(money) as sum from duoduo_tixian where type=2 and status=1 and dotime >= "1562256000" and dotime < "1562342399"-----00:27:43
+120.32.54.155-----select sum(spend) as sum from duoduo_duihuan where mode=1 and status=1 and addtime >= "1562256000" and addtime < "1562342399"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_user where 1 and regtime >= "2019-07-05 00:00:00" and regtime < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select sum(real_pay_fee) as sum from duoduo_tradelist where 1 and pay_time >= "2019-07-05 00:00:00" and pay_time < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select sum(commission) as sum from duoduo_tradelist where 1 and pay_time >= "2019-07-05 00:00:00" and pay_time < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_tradelist where 1 and pay_time >= "2019-07-05 00:00:00" and pay_time < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_tradelist where checked=2 and pay_time >= "2019-07-05 00:00:00" and pay_time < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select sum(sales) as sum from duoduo_mall_order where status=1 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select sum(commission) as sum from duoduo_mall_order where status=1 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_mall_order where 1 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_mall_order where status=1 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_mall_order where status=0 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_mall_order where uid=0 and order_time >= "1562256000" and order_time < "1562342399"-----00:27:43
+120.32.54.155-----select sum(`point`) as `point`,sum(`commission`) as `commission` from duoduo_task where (immediate="1" or immediate="2") and addtime >= "2019-07-05 00:00:00" and addtime < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_task where 1 and addtime >= "2019-07-05 00:00:00" and addtime < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select count(1) as num from duoduo_task where (immediate="1" or immediate="2") and addtime >= "2019-07-05 00:00:00" and addtime < "2019-07-05 23:59:59"-----00:27:43
+120.32.54.155-----select * from duoduo_kuaijie where 1 order by id asc -----00:27:43
+120.32.54.155-----select title from duoduo_menu where `mod`="webset" and act="center" limit 1-----00:27:43
+120.32.54.155-----set names utf8-----00:27:50
+120.32.54.155-----select * from duoduo_webset where type=1 or type=0 -----00:27:50
+120.32.54.155-----select * from duoduo_webset where type=2 -----00:27:50
+120.32.54.155-----select val from duoduo_webset where var="authorize" limit 1-----00:27:50
+120.32.54.155-----select * from duoduo_duoduo2010 where adminname="南客" and adminpass="b980bc2f33a155c31a5b5e787587976e" limit 1-----00:27:50
+120.32.54.155-----select a.id from duoduo_menu as a,duoduo_menu_access as b where a.`mod`="webset" and a.`act`="center" and a.id=b.menu_id and b.role_id="7" limit 1-----00:27:50
+120.32.54.155-----select a.* from duoduo_menu as a,duoduo_menu_access as b where a.id=b.menu_id and b.role_id='7' and a.mod<>'fun' order by a.listorder desc,a.sort desc,a.id asc-----00:27:50
+120.32.54.155-----select id from duoduo_mall where 1 limit 1-----00:27:50
+120.32.54.155-----select count(1) as num from duoduo_hezuo as a where 1-----00:27:50
+120.32.54.155-----select goumai,lianjie,taocan,leixing,wangwang,shouji,shijian from duoduo_xinbiao where 1=1 -----00:27:50
+120.32.54.155-----select title from duoduo_menu where `mod`="hezuo" and act="list" limit 1-----00:27:50
+183.144.232.191-----set names utf8-----03:33:49
+183.144.232.191-----select * from duoduo_webset where type=1 or type=0 -----03:33:49
+183.144.232.191-----select * from duoduo_webset where type=2 -----03:33:49
+183.144.232.191-----select val from duoduo_webset where var="authorize" limit 1-----03:33:49
+206.38.89.91-----set names utf8-----03:33:49
+206.38.89.91-----select * from duoduo_webset where type=1 or type=0 -----03:33:49
+206.38.89.91-----select * from duoduo_webset where type=2 -----03:33:49
+206.38.89.91-----select val from duoduo_webset where var="authorize" limit 1-----03:33:49
+139.101.107.54-----set names utf8-----03:33:50
+139.101.107.54-----select * from duoduo_webset where type=1 or type=0 -----03:33:50
+139.101.107.54-----select * from duoduo_webset where type=2 -----03:33:50
+139.101.107.54-----select val from duoduo_webset where var="authorize" limit 1-----03:33:50
+243.101.234.249-----set names utf8-----03:33:50
+243.101.234.249-----select * from duoduo_webset where type=1 or type=0 -----03:33:50
+243.101.234.249-----select * from duoduo_webset where type=2 -----03:33:50
+243.101.234.249-----select val from duoduo_webset where var="authorize" limit 1-----03:33:50

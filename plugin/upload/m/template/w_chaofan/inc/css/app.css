@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+	background:#fff;
+} 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    font-family: Microsoft Yahei,ubuntu,helvetica,arial;
+}
+a,img
+{
+	border:0 none;
+	text-decoration:none;
+	color:#fff;
+	cursor:pointer;
+}
+.header
+{
+	width:100%;
+}
+.top
+{
+	width:80%;
+	margin:0 auto;
+	height:5em;
+	border-bottom:1px solid #d8d8d8;
+}
+.logo
+{
+	height:5em;	
+	float:left;
+	width:50%;
+	display:block;
+	line-height:5em;
+	margin-top:0.8em;
+}
+.logo img
+{
+	height:2.8em;
+	line-height:3em;
+}
+.w_name
+{
+	width:50%;
+	height:5em;
+	float:right;
+	font-size:1em;
+	text-align:right;
+	line-height:5em;
+	vertical-align:middle;
+}
+.zhongjian
+{
+	width:100%;
+}
+.mid_content
+{
+	width:80%;
+	margin:0 auto;
+}
+.mid_content .wz
+{
+	width:100%;
+	font-size:1em;
+	text-align:left;
+	float:left;
+	margin-top:0.75em;
+}
+.mid_iphone
+{
+	width:100%;
+	height:2em;
+	background:#f60;
+	border-radius:0.375em;
+	margin-top:0.75em;
+	line-height:2em;
+	color:#fff;
+}
+.mid_iphone .down
+{
+	width:50%;
+	margin:0 auto;
+	text-align:center;
+}
+.mid_iphone .down img
+{
+	height:30%;
+	display:block;
+	height:2em;
+	float:left;
+}
+.mid_content span
+{
+	font-size:0.875em;
+	color:#fff;
+	line-height:2em;
+}
+.mid_android
+{
+	width:100%;
+	height:2em;
+	background:#88ba33;
+	border-radius:0.375em;
+	margin-top:0.75em;
+	line-height:2em;
+	color:#fff;
+}
+.mid_android .down
+{
+	width:50%;
+	margin:0 auto;
+	text-align:center;
+}
+.mid_android .down img
+{
+	height:30%;
+	display:block;
+	height:1.9em;
+	float:left;
+}
+.mid_pc
+{
+	width:80%;
+	background:#9a99ff;
+	height:2em;
+	border-radius:1em;
+	line-height:2em;
+	color:#fff;
+	margin:0.75em auto;
+	text-align:center;
+	font-size:0.875em;
+	font-weight:bold;
+}
+.mid_iphone_sj
+{
+	width:60%;
+	margin:0 auto;
+}
+.mid_iphone_sj img
+{
+	width:100%;
+}

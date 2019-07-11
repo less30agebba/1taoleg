@@ -1,0 +1,366 @@
+@charset "utf-8";
+.wrapshijiu{background:url(../images/shijiu.jpg) no-repeat center top;}
+.superindexshijiu{width:1200px;margin:0 auto}
+.top01shijiu{height:300px; overflow:hidden;}
+
+.wrapjiu{background:url(../images/jiu.jpg) no-repeat center top;}
+.superindexjiu{width:1200px;margin:0 auto}
+.top01jiu{height:300px; overflow:hidden;}
+
+.wraptejia{background:url(../images/rexiao.jpg) no-repeat center top;}
+.superindextejia{width:1200px;margin:0 auto}
+.top01tejia{height:300px; overflow:hidden;}
+
+.wrapchaofan{background:url(../images/chaofan.jpg) no-repeat center top;}
+.superindexchaofan{width:1200px;margin:0 auto}
+.top01chaofan{height:300px; overflow:hidden;}
+.xin{ margin:0 auto; padding:30px 0; text-align:center}
+.new-icon{  background: url(../images/new.png) no-repeat 0 0;
+  height: 0;
+  overflow: hidden;
+  padding-top: 37px;
+  width: 37px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 15;
+}
+.tuijian{ background: url(../images/re.png) no-repeat 0 0;
+  height: 0;
+  overflow: hidden;
+  padding-top: 64px;
+  width: 64px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 15;
+}
+.yugao2{ background: url(../images/yugao.png) no-repeat 0 0;
+  height: 0;
+  overflow: hidden;
+  padding-top: 64px;
+  width: 64px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 15;
+}
+.goods_list_315
+{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+}
+.goods_list_315 ul
+{
+	width:1230px;
+}
+.goods_list_315 ul li
+{width:285px;background:#FFF;float:left;margin:0 20px 20px 0;
+	position:relative;  
+}
+.goods_list_315 ul li:hover
+{box-shadow:4px 4px 20px #d5d5d5;
+}
+.goods_list_315 ul li a img
+{
+	width:285px; 
+	height:285px;
+}
+.goods_list_315 ul li a img:hover
+{opacity:.8;
+}
+.yfl{ background:#f36; color:#FFFFFF;  width:50px; border-radius:2px;padding:2px 2px; text-align:center}
+
+.goods_list_315 ul li a .jy_title
+{float:left; 
+	width:265px;border-bottom:#ddd dotted 1px;
+	height:25px;   font-family:'微软雅黑';
+	margin:8px 12px 8px 12px;
+	*margin:8px 12px 3px 12px;
+	display:block;
+	white-space:nowrap; color:#777;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	font-size:14px;
+}
+.goods_list_315 ul li a .jy_xiaoliang
+{float:left;
+	width:90px;
+	height:25px;
+	margin:11px 12px 15px 12px;
+	display:block;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	font-size:12px;
+}
+
+.goods_list_315 ul li .jy_nr
+{
+	display:block; 
+	width:274px;
+	margin:0px 10px;
+}
+.goods_list_315 ul li .jy_price
+{
+	float:left; margin-bottom:-6px;
+	font-size:16px;font-family: Arial;
+	width:100%;font-weight:600;
+}
+.goods_list_315 ul li .jy_price span
+{
+	font-size: 26px;
+    font-family: Arial;
+    font-weight:500;
+	margin-right:8px;
+}
+.goods_list_315 ul li .jy_price del,.goods_list_315 ul li .jy_price .dazhe
+{
+	font-size:14px;font-weight: 200;
+	font-family:'微软雅黑';
+	color:#999;
+}
+.goods_list_315 ul li .jy_del
+{
+	float:left;  margin-bottom:15px;*margin-top:2px;
+	color:#999;
+	width:100%;
+}
+.money{ color:#333; }
+.money em.num2{ font-family:Arial, Helvetica, sans-serif; font-size:22px; font-weight:bold; margin-left:-2px;}
+.f_money{ color:#f36; height:25px; line-height:27px;vertical-align:bottom;}
+.f_money span{ }
+.fuhao{font-size:14px; height:20px; line-height:23px; margin-right:3px;}
+.f_num{ font-size: 24px; vertical-align:middle;
+    font-family: Arial;}
+.f_money .f_word{border: 1px solid #fe5679;height:20px; line-height:20px;
+    padding: 2px 6px;*padding: 2px 6px 0 6px;
+    border-radius: 5px;
+    margin:2px 0px 0px 5px;}
+.f_money .f_word em{ width:6px; height:5px; position:absolute; top:6px; left:-6px; background:url(../images/jt.png) no-repeat left top;}
+
+.goods_list_315 ul li .inblock
+{
+	float:left;
+	margin-bottom:5px;
+	line-height:30px;
+}
+.goods_list_315 ul li .inblock2
+{
+	float:left;  margin-right:15px;
+	margin-top:7px;
+	height:20px;
+}
+.goods_list_315 ul li .inblock2 .sm
+{   background: #A1D88D;
+  width: 70px;font-size:12px;
+  height: 17px; padding:2px 5px;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  line-height: 17px;
+}
+.goods_list_315 ul li .inblock.hiddens
+{
+	overflow:hidden;
+}
+.goods_list_315 ul li .jy_del .dazhe
+{
+	padding-left:5px;
+}
+.goods_list_315 ul li .jy_del .biaoqian
+{
+	padding-left:4px;padding-right:4px;
+	color:#fff;
+	border-radius:2px;
+	-webkit-border-radius:2px;
+	display:inline-block;
+}
+
+.goods_list_315 ul li .jy_del .biaoqian img
+{
+	margin-bottom:8px;
+	height:14px;
+	width:24px;
+	border-radius:3px;
+}
+.goods_list_315 ul li .jy_del .biaoqian.lanse
+{
+	background:#62c3fb;
+}
+.goods_list_315 ul li .jy_del .biaoqian.chengse
+{
+	background:#f36519;
+}
+.goods_list_315 ul li .jy_del .biaoqian.qingse
+{
+	background:#ff3366;
+}
+.goods_list_315 ul li .jy_w_buy
+{
+	float:right; overflow:hidden; text-align:right
+}
+.goods_list_315 ul li .jy_w_buy .tb
+{
+	width:20px; margin-left:15px;
+	height:20px;
+	float:right;
+	color:#CE0000;
+	font-size:14px;
+	line-height:20px;
+	margin-top:5px;
+	*margin-top:2px;
+}
+.goods_list_315 ul li .jy_w_buy .tmall
+{
+	width:20px;margin-left:15px;
+	height:20px;
+	float:right;
+	color:#CE0000;
+	font-size:15px;
+	line-height:20px;
+	margin-top:5px;
+	*margin-top:2px;
+}
+.goods_list_315 ul li .jy_w_buy .jd
+{
+	min-width:20px;
+	height:20px;
+	float:right;
+	color:#CE0000;
+	font-size:15px;
+	line-height:20px;
+	margin-top:5px;
+	*margin-top:2px;
+}
+.goods_list_315 ul li .jy_w_buy .paipai
+{
+	min-width:50px;
+	height:20px;
+	float:right;
+	color:#CE0000;
+	font-size:15px;
+	line-height:20px;
+	margin-top:5px;
+	*margin-top:2px;
+}
+.goods_list_315 ul li .jy_w_buy .tb i
+{
+	width:20px;
+	height:20px; vertical-align:bottom; margin-bottom:3px;
+	display:inline-block;
+	background:url(../images/tb.png) no-repeat;
+	margin-right:5px;
+}
+.goods_list_315 ul li .jy_w_buy .tmall i
+{
+	width:20px;
+	height:20px;vertical-align:bottom; margin-bottom:3px;
+	display:inline-block;
+	background:url(../images/tmall_ico.png) no-repeat;
+	margin-right:5px;
+}
+.goods_list_315 ul li .jy_w_buy .jd i
+{
+	width:20px;
+	height:20px;vertical-align:bottom; margin-bottom:3px;
+	display:inline-block;
+	background:url(../images/jd_ico.png) no-repeat;
+	margin-right:5px;
+}
+
+.goods_list_315 ul li .jy_w_buy .paipai i
+{
+	width:15px;
+	height:15px;vertical-align:bottom; margin-bottom:3px;
+	display:inline-block;
+	background:url(../images/pai_ico.png) no-repeat;
+	margin-right:5px;
+}
+.goods_list_315 ul li .jy_w_buy .yishou
+{
+	float:right; font-size:14px;
+	color:#666;
+}
+.goods_list_315 ul li .jy_w_buy .yishou2
+{
+	float:right; border: 1px dashed #008800;height:25px; line-height:25px;
+    padding: 0px 6px;color:#008800;
+    border-radius: 5px; font-size:13px;
+    margin: 1px 0px 0px 5px;
+}
+.goods_list_315 ul li:hover .jy_title
+{
+	color:#ff3366;
+	text-decoration:none;
+}
+
+.goods_list_315 .start_time,.goods_list_315 .end_time,.goods_list_315 .yimaiguang
+{
+	height:65px;
+	width:258px;
+	text-align:center;
+	line-height:65px;
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+	padding-left:42px;
+	position:absolute;
+	top:120px;
+	left:0px;
+	z-index:11;
+}
+.goods_list_315 .start_time
+{
+	background:url(../images/start.png) no-repeat;
+}
+.goods_list_315 .end_time
+{
+	background:url(../images/hd_end.png) no-repeat;
+}
+.goods_list_315 .yimaiguang
+{
+	background:url(../images/touming.png) no-repeat;
+}
+.goods_list_315 .opca
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:285px;
+	height:285px;
+	z-index:10;
+}
+.goods_list_315 .tp_ab
+{
+	position:absolute;
+	left:0px;
+	bottom:3px;
+}
+.goods_list_315 .tp_bq
+{
+	width:70px;
+	height:40px;
+	padding-top:5px;
+	float:left;
+	color:#fff;
+	text-align:center;
+	margin-right:10px;
+	line-height:17px;
+}
+
+.goods_list_250 .n_top
+{
+	width:33px;
+	height:33px;
+	background:url(../images/n_top.png) no-repeat;
+	position:absolute;
+	right:4px;
+	top:2px;
+	z-index:100;
+}
+.gm .tejia{float:right; text-align:center;color:#fff;font-size:15px;width:70px;margin-top:10px;height:30px;line-height:30px;position:absolute; z-index:100px; display:none;border-radius:3px;right:10px; bottom:10px;*bottom:15px}
+.gm:hover .tejia{
+	display:block;
+}

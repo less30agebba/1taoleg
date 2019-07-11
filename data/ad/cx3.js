@@ -1,0 +1,1 @@
+document.write('<a target="_blank" ><img src="upload/2019/0523/11291766215.jpg" alt="" /></a>')
