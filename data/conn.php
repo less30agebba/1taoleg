@@ -1,5 +1,5 @@
 <?php
-$dbserver='localhost';
+$dbserver='39.100.113.118';
 $dbuser='root';
 $dbpass='923923';
 $dbname='fanli_98ifanli_';
