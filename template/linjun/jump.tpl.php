@@ -59,7 +59,7 @@ form label.validate_right { padding-left:12px; background:transparent url(<?=TPL
 <div class="alert_fullbg"></div>
 <div class="alert_bg" id="alert_fast_log_reg" style="display: block;">
 	<div class="alert_box">
-<div class="alert_top"><span>
+<div class="alert_top"><a class="alert_close" href="<?=$url?>"></a><span>
 <?php
 if($need_tbnick===1){
 	$title='';
@@ -74,40 +74,15 @@ else{
 }
 echo $title;
 ?>
-</span><a class="alert_close" href="<?=$url?>"></a></div>
+</span></div>
 <div class="alert_content">
-<div class="sort_info">
-<?php if($need_tbnick==1 && FANLI==1){?>
- <div class="login_reg" style="text-align:center; font-size:14px; padding-left:0px; width:auto">
-<p style="padding-bottom:20px; margin:0 auto; line-height:25px; text-align:center;">亲！  ~  请先去绑定您的淘宝订单号，以便能快速跟踪您的订单！</p>
-<p style="padding-bottom:20px;">
-	<a href="<?=u('user','info',array('do'=>'tbnick'))?>" class="linehei" style="margin-right:80px;">去绑定</a>
-	<a href="<?=$url?>" class="linehei">先购物</a>
-</p>
-<?php if($mobile_tip==1){?>
-<?=mobile_tip($click_url,$web_price,$mobile_price,$phone_app_statu)?>
-<?php }?>
 
-</div>
-<?php }elseif($mobile_tip==1 && $uid>0){?>
-
-<?=mobile_tip($click_url,$web_price,$mobile_price,$phone_app_statu)?>
-
-<?php }else{?>
-<?php if($act!='s8' && $pic!=''){?>
-<div class="sort_pic"><?=html_img($pic,0,$row["name"])?></div>
-<em></em>
-<div class="sort_price" style="color:#F00"><?php if($act=='goods' || $act=='paipaigoods'){?>价格：<b class="red price"><?=$price?></b>元<br/><?php }?><?php if($fan){?>最高返：<b class="red fx"><?=$fan?></b><?php }?>
-</div>
-<?php }?>
-<p><?php if(FANLI==1){?><a target="_blank" class="blue" href="<?=u('article','view',array('id'=>7))?>">什么是购物<?=FANLI_WORD1?></a><?php }?><?php if(!$dduser['id']){?><a style="float:right" class="blue" href="<?=$url?$url:$iframe_url?>">先购物<?php if(FANLI==1){?>，再<?=FANLI_WORD1?><?php }?>>></a><?php }else{?><a style="float:right" class="blue" href="<?=$url?>">如果您的浏览器没有自动跳转，<b style="color:#F00">请点击这里</b></a><?php }?></p>
-</div>
-<div class="login_reg">
-<ul class="l_r_menu">
-  <li><a href="javascript:;" class="l_log current">登录<?php if(FANLI==1){?>领取<?=FANLI_WORD1?><?php }?></a></li>
-  <li><a href="javascript:;" class="l_reg">注册<?php if(FANLI==1){?>领取<?=FANLI_WORD1?><?php }?></a></li>
-</ul>
-<div class="l_r_login" id="log">
+    <div class="login_reg">
+        <ul class="l_r_menu">
+            <li><a href="javascript:;" class="l_log current">登录<?php if(FANLI==1){?>领取<?=FANLI_WORD1?><?php }?></a></li>
+            <li><a href="javascript:;" class="l_reg">注册<?php if(FANLI==1){?>领取<?=FANLI_WORD1?><?php }?></a></li>
+        </ul>
+        <div class="l_r_login" id="log">
   <div class="login">
   <form action="<?=u('user','login')?>" method="post" onSubmit="return ajaxLogin(this)">
   
@@ -125,9 +100,38 @@ echo $title;
     <div style="clear:both"></div>
     <input type="hidden" name="sub" value="1" />
     <div style="margin-top:10px;">
-    <div style="float:left;margin-left:50px; _margin-left:20px"><input type="submit" class="button" value="登 录"  tabindex="3" /></div><div style="float:left;margin-left:20px;"><a href="<?=u('user','getpassword')?>" class="fo_psw" target="_blank">忘记密码?</a></div>
+    <div style="float:left;margin-left:50px; _margin-left:20px"><input type="submit" id="loginButton" class="button" value="登 录"  tabindex="3" /></div><div style="float:left;margin-left:20px;"><a href="<?=u('user','getpassword')?>" class="fo_psw" target="_blank">忘记密码?</a></div>
     </div>
     <div style="clear:both"></div>
+      <div class="sort_info">
+              <?php if($need_tbnick==1 && FANLI==1){?>
+              <div class="login_reg" style="text-align:center; font-size:14px; padding-left:0px; width:auto">
+
+                  <p style="padding-bottom:20px; margin:0 auto; line-height:25px; text-align:center;">亲！  ~  请先去绑定您的淘宝订单号，以便能快速跟踪您的订单！</p>
+                  <p style="padding-bottom:20px;">
+                      <a href="<?=u('user','info',array('do'=>'tbnick'))?>" class="linehei" style="margin-right:80px;">去绑定</a>
+                      <a href="<?=$url?>" class="linehei">先购物</a>
+                  </p>
+                  <?php if($mobile_tip==1){?>
+                      <?=mobile_tip($click_url,$web_price,$mobile_price,$phone_app_statu)?>
+                  <?php }?>
+
+              </div>
+          <?php }elseif($mobile_tip==1 && $uid>0){?>
+
+              <?=mobile_tip($click_url,$web_price,$mobile_price,$phone_app_statu)?>
+
+          <?php }else{?>
+          <?php if($act!='s8' && $pic!=''){?>
+              <div class="sort_pic"><?=html_img($pic,0,$row["name"])?></div>
+              <em></em>
+              <div class="sort_price" style="color:#F00"><?php if($act=='goods' || $act=='paipaigoods'){?>价格：<b class="red price"><?=$price?></b>元<br/><?php }?><?php if($fan){?>最高返：<b class="red fx"><?=$fan?></b><?php }?>
+              </div>
+          <?php }?>
+          <p><?php if(FANLI==1){?><label class="n_checked select-privacy"><i class="icon_select"></i>了解什么是<a target="_blank" class="blue" href="<?=u('article','view',array('id'=>7))?>">购物<?=FANLI_WORD1?></a><?php }?><?php if(!$dduser['id']){?>和<a class="blue" href="<?=$url?$url:$iframe_url?>">先购物<?php if(FANLI==1){?>，再<?=FANLI_WORD1?><?php }?>>></a><?php }else{?><a style="float:right" class="blue" href="<?=$url?>">如果您的浏览器没有自动跳转，<b style="color:#F00">请点击这里</b></a></label><?php }?></p>
+
+      </div>
+
   </form>
   </div>
   <?php if(count($api)>0){?>
@@ -194,7 +198,7 @@ echo $title;
   <tr>
     <td>&nbsp;</td>
     <td><input type="hidden" name="sub" value="1" />
-    <input type="submit" class="button" name="sub" value="注 册" tabindex="8" id="submits" /></td>
+    <input type="submit" class="button" name="sub" id="registerButton" value="注 册" tabindex="8" id="submits" /></td>
     <td>&nbsp;</td>
   </tr>
 </table>
