@@ -1,1 +1,1 @@
-<?php exit;?>[]
+<?php exit;?>[{"code":"328522812","title":"QQ\u5ba2\u670d","type":"1"}]
