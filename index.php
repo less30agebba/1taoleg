@@ -9,6 +9,7 @@
  * ============================================================================
 */
 define('INDEX',1);
+
 if(defined('WAP') || defined('APP')){
 	include (dirname(__FILE__).'/comm/dd.config.php');
 }
