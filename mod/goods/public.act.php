@@ -44,7 +44,26 @@ function act_goods_list($bankuai_code='',$do,$ajax_load_num,$pagesize=10,$page=1
 		}
 	}
 	if($search){
-		$where.=" and title like '%".$search."%'";
+
+		$type_all=dd_get_cache('type');
+		$web_cid_arr=$type_all['goods'];
+		//先注释 等需要搜索实时更新时候 加钱取消下列注释
+//		$type=$duoduo->select_all('type','id,title',"tag='goods'");
+//		foreach($type as $vo){
+//			$web_cid_arr[$vo['id']]=$vo['title'];
+//		}
+		foreach (explode(' ', $search) as $contition) {
+
+			$tid = array_search($contition, $web_cid_arr);
+
+			if(isset($tid) && $tid>1) {
+				$where.=" and cid=".(int)$tid;
+			}
+			else {
+				$where.=" and title like '%".$contition."%'";
+			}
+		}
+		echo $where;
 	}
 	$data=$goods_class->index_list(array('code'=>$bankuai_code,'cid'=>(int)$cid),$pagesize,$page,$where,$goods_total,$order_by);
 	if($goods_total==1){

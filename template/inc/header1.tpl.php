@@ -215,9 +215,9 @@ unset($js);
 <div class="searchR"><div class='searchbox' id="searchbox">
 <div style="TEXT-AliGN: left;">
 <FORM style="FLOAT: left" class='frombox' method='get' name='formname' action='index.php' target="_blank" autocomplete="off" onsubmit="return checkSubFrom('#s-txt');">
-<input type="hidden" id="mod" name="mod" value="inc" class="mod" /><input type="hidden" id="act" name="act" value="check" class="act" />
+<input type="hidden" id="mod" name="mod" value="goods" class="mod" /><input type="hidden" id="act" name="act" value="index" class="act" />
 <SPAN class="box-middle c_border">
-<INPUT id=s-txt class=s-txt name='q' x-webkit-speech value='请输入任意商城名、淘宝/天猫商品标题开始购物' moren="<?=$webset['search_key']['head']?>"/>
+<INPUT id=s-txt class=s-txt name='search' x-webkit-speech value=<?=isset($_GET['search'])?$_GET['search']:'请输入任意商城名、淘宝/天猫商品标题开始购物'?> moren="<?=isset($_GET['search'])?$_GET['search']:$webset['search_key']['head']?>"/>
 
 <INPUT class="sbutton c_bgcolor" type=submit value="购物搜索">
 </SPAN> 
