@@ -3,6 +3,7 @@ if(!defined('INDEX')){
 	exit('Access Denied');
 }
 $parameter=act_goods_index($dd_tpl_data['ajax_load_num']);
+//echo "<pre>";print_r($parameter);echo "<pre>";
 extract($parameter);
 $bankuai_tpl=$bankuai_tpl?$bankuai_tpl:$dd_tpl_data['bankuai_tpl'];
 $yugao_time=date('Y-m-d '.$bankuai['yugao_time'].":00");

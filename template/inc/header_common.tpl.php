@@ -295,11 +295,11 @@ $(".have_child").hover(function() {
 $searchInput.focusClear();
 $(function () {
          $(".search_quan").click(function () {
-             location.href = "index.php?mod=so&act=index&code=quan&q=" + $searchInput.val();
+             location.href = "index.php?mod=goods&act=index&search=" + $searchInput.val();
              return false;
          });
          $(".search_super").click(function () {
-             location.href = "index.php?mod=so&act=index&code=chaofan&q=" + $searchInput.val();
+             location.href = "index.php?mod=goods&act=index&search=" + $searchInput.val();
              return false;
          });
      })

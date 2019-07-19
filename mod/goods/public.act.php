@@ -13,7 +13,7 @@ if(!defined('INDEX')){
 	exit('Access Denied');
 }
 
-function act_goods_list($bankuai_code='',$do,$ajax_load_num,$pagesize=10,$page=1,$cid=0,$goods_total,$order_by){
+function act_goods_list($bankuai_code='',$do,$ajax_load_num,$pagesize=10,$page=1,$cid=0, $search='',$goods_total,$order_by){
 	global $duoduo,$webset,$dduser;
 	include(DDROOT.'/comm/goods.class.php');
 	$goods_class=new goods($duoduo);
@@ -42,6 +42,9 @@ function act_goods_list($bankuai_code='',$do,$ajax_load_num,$pagesize=10,$page=1
 		else{
 			$where.=" and cid=".(int)$cid;
 		}
+	}
+	if($search){
+		$where.=" and title like '%".$search."%'";
 	}
 	$data=$goods_class->index_list(array('code'=>$bankuai_code,'cid'=>(int)$cid),$pagesize,$page,$where,$goods_total,$order_by);
 	if($goods_total==1){
