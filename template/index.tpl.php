@@ -307,7 +307,21 @@ $(function(){
   <div class="fixed-outer">
     <div class="rx-list-fixed" data-bk="rx_hot_words">
       <ul class="rx-list clearfix">
-
+          <div class="jy_auto">
+              <div class="jy_nav" id="_nav">
+                  <div class="up_fenlei">
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu#fl">全部</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10001#fl">女装</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10002#fl">鞋包</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10003#fl">美妆</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10004#fl">美食</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10005#fl">母婴</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10006#fl">居家</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10007#fl">数码</a>
+                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10008#fl">其他</a>
+                  </div>
+              </div>
+          </div>
       </ul>
     </div>
   </div>
