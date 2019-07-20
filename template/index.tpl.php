@@ -50,6 +50,18 @@ if($web_cid){
 }
 if(!empty($web_cid)){
 	$goods_type=$duoduo->select_all("type","id,title",$where."  order by sort=0 asc,sort asc,id desc");
+//	获取到商品类型的时候，给商品类型数组添加商品地址链接
+    foreach($goods_type as $k=>$vo){
+        $canshu=array();
+        if($bankuai_code){
+            $canshu['code']=$bankuai_code;
+        }
+        $canshu['cid']=$vo['id'];
+        if($_GET['do']){
+            $canshu['do']=$_GET['do'];
+        }
+        $goods_type[$k]['url']=u('goods','index',$canshu);
+    }
 }
 $yugao_time=date('Y-m-d '.$first_bankuai['yugao_time'].":00");
 if(strtotime($yugao_time)>TIME){
@@ -307,21 +319,44 @@ $(function(){
   <div class="fixed-outer">
     <div class="rx-list-fixed" data-bk="rx_hot_words">
       <ul class="rx-list clearfix">
-          <div class="jy_auto">
-              <div class="jy_nav" id="_nav">
-                  <div class="up_fenlei">
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu#fl">全部</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10001#fl">女装</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10002#fl">鞋包</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10003#fl">美妆</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10004#fl">美食</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10005#fl">母婴</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10006#fl">居家</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10007#fl">数码</a>
-                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10008#fl">其他</a>
-                  </div>
+<!--          <div class="jy_auto">-->
+<!--              <div class="jy_nav" id="_nav">-->
+<!--                  <div class="up_fenlei">-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu#fl">全部</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10001#fl">女装</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10002#fl">鞋包</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10003#fl">美妆</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10004#fl">美食</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10005#fl">母婴</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10006#fl">居家</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10007#fl">数码</a>-->
+<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10008#fl">其他</a>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--          </div>-->
+          <?php if(empty($bankuai_code)||$bankuai['fenlei']==1||$bankuai['yugao']==1){?>
+              <div class="jy_auto">
+                  <?php if($goods_type||$first_bankuai['yugao']==1){?>
+                      <div class="jy_nav" id="<?=$first_bankuai['code']?>_nav">
+                          <?php
+                          if(($bankuai['fenlei']==1 || $_GET['code']=='')&&$goods_type){
+                              $url_canshu=array("code"=>$bankuai_code);
+                              if($_GET['do']!=''){
+                                  $url_canshu['cid']=0;
+                                  $url_canshu['do']=$_GET['do'];
+                              }
+                              ?>
+                              <div class="up_fenlei">
+                                  <a <?php if(empty($_GET['cid'])){?>class="cur"<?php }?> href="<?=u('goods','index',$url_canshu)?>#fl">全部</a>
+                                  <?php foreach($goods_type as $k=>$vo){?>
+                                      <a href="<?=$vo['url']?>#fl" <?php if($_GET['cid']==$vo['id']){?>class="cur c_border"<?php }?>><?=$vo['title']?></a>
+                                  <?php }?>
+                              </div>
+                          <?php }?>
+                      </div>
+                  <?php }?>
               </div>
-          </div>
+          <?php }?>
       </ul>
     </div>
   </div>
