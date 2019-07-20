@@ -152,7 +152,7 @@ else{
 <div id="shownav">
     <ul class="nav_main" id="nav_main" >
         <li class="fenlei" onmouseover="document.getElementById('category_list').style.height='auto';"
-            onmouseout="document.getElementById('category_list').style.height='0'" onclick="document.getElementById('category_list').style.height='auto'" style="width:240px;height: 46px;overflow: hidden;"></li>
+            onmouseout="document.getElementById('category_list').style.height='0'" onclick="document.getElementById('category_list').style.height='auto'" style="width:240px;height: 39px;overflow: hidden;"></li>
     </ul>
 </div>
 

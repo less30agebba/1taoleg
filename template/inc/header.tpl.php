@@ -58,10 +58,10 @@ unset($js);
 
 .gwzx .vipduo2{display:block;width:273px;height:43px; padding-left:15px;border-top:3px solid #EE113D;font-size:16px;line-height:43px;text-align:left;color:#444;cursor:pointer;border-bottom:0;font-family:'Hiragino Sans GB','Microsoft YaHei','SimSun',sans-serif;}
 
-.daohang1000 li.linav a.anav:hover{font-size:18px;color:#EE113D;text-decoration:none;position:relative;width:120px;height:46px;DISPLAY:block}
-#fontt a {color:#EE113D;}
+.daohang1000 li.linav a.anav:hover{font-size:19px;color:#EE113D;background:#F1F1F1;text-decoration:none;position:relative;width:120px;height:39px;DISPLAY:block}
+#fontt a {color:#EE113D;background:#F1F1F1;}
 
-.daohang1000 li.linav1{position:relative;z-index:999;margin-top:0px;float:left;width:239px;height:46px; background:#EE113D}
+.daohang1000 li.linav1{position:relative;z-index:999;margin-top:0px;float:left;width:239px;height:39px; background:#EE113D}
 
 
 .dddefault .sbutton{LINE-HEIGHT:35px;*LINE-HEIGHT:37px;background:#EE113D;BORDER-RIGHT-WIDTH:0px;WIDTH:110px;FLOAT:right;BORDER-TOP-WIDTH:0px;BORDER-BOTTOM-WIDTH:0px;HEIGHT:40px;BORDER-LEFT-WIDTH:0px;CURSOR:pointer;color:#fff;cursor:pointer;font-size:16px;padding-left: 6px;font-family:'微软雅黑';}

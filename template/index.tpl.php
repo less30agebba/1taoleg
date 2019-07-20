@@ -78,15 +78,17 @@ $(function(){
 
 </div>
 	<ul class="mainbanner_list">
-		 <li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li>	</ul>
+		 <li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li>	</ul>
 	<div class="hdpads"> <a href="/" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="200" /></a>
 	 <a href="" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="190" style="margin-top:10px" /></a></div>
 	 <div class="guanbihdp"></div>
- </div>  
+ </div>
+<div class="slogon">
+    <img src="/upload/slogo.png" width="1200"  />
+</div>
  
  <div class="main-title" id="qiang">
-         <p class='lg'>限/时/促/销</p>
-         <p class="sm">TIME LIMIT PROMOTION</p>
+     <a class="limit" >限时抢购</a>
       </div>
 	    <div class="t-0"> 
 		<div class="t-0left"><?=AD(cx)?></div>  
@@ -102,7 +104,7 @@ $(function(){
 
 	 <div class="clear"></div>
 <div class="main-title" id="baokuan">
-    <p class='lg'>爆/款/推/荐</p>
+    <p class='lg'>爆款推荐</p>
     <p class="sm">EXPLOSION RECOMMENDATION</p>
 </div>
 
@@ -146,7 +148,7 @@ $(function(){
 <div class="clear"></div>
 
 <div class="main-title" id="kuaixun">
-    <p class='lg'>最/新/快/讯</p>
+    <p class='lg'>最新快讯</p>
     <p class="sm">LATEST NEWS</p>
 </div>
 
@@ -199,7 +201,7 @@ $(function(){
 <div class="clear"></div>
 
 <div class="main-title" id="quan">
-    <p class='lg'>大/额/优/惠/券</p>
+    <p class='lg'>大额优惠券</p>
     <p class="sm">LARGE COUPON</p>
 </div>
 
@@ -241,7 +243,7 @@ $(function(){
     </ul></div>
 <div class="clear"></div>
 <div class="main-title" id="pinpai">
-    <p class='lg'>品/牌/专/区</p>
+    <p class='lg'>品牌专区</p>
     <p class="sm">BRAND SALE</p>
 </div>
 <div class="pinpai-jxhh">
@@ -299,7 +301,7 @@ $(function(){
 
 <div class="wrap-rx" style="margin-top:15px" id="xihuan">
     <div class="main-title">
-<p class='lg'>猜/你/喜/欢</p>
+<p class='lg'>猜你喜欢</p>
 <p class="sm">GUESS YOU LIKE</p>
 </div>
 
