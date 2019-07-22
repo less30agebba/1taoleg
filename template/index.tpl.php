@@ -25,7 +25,7 @@ $hzhb=dd_link($duoduo,30,1);
 $ajax_load_num=$dd_tpl_data['ajax_load_num'];
 
 $bankuai=$duoduo->select_all('bankuai','id,title,code,bankuai_tpl,web_cid,yugao,yugao_time,huodong_time',"tuijian=1 and status=1 and del=0 ORDER BY sort=0 ASC,sort asc,id desc");
-$baokuan=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='shijiu'  ORDER BY id desc Limit 0,10");
+$baokuan=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='shijiu'  ORDER BY id desc Limit 6,10");
 $baokuan=addLocalUrl($baokuan,'shijiu');
 $rem=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='zhidemai'  ORDER BY id desc Limit 0,12 ");
 $rem=addLocalUrl($rem,'zhidemai');
