@@ -25,31 +25,34 @@ $hzhb=dd_link($duoduo,30,1);
 $ajax_load_num=$dd_tpl_data['ajax_load_num'];
 
 $bankuai=$duoduo->select_all('bankuai','id,title,code,bankuai_tpl,web_cid,yugao,yugao_time,huodong_time',"tuijian=1 and status=1 and del=0 ORDER BY sort=0 ASC,sort asc,id desc");
-$baokuan=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='shijiu'  ORDER BY id desc Limit 0,10");
+$baokuan=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='shijiu'  ORDER BY id desc Limit 6,10");
+$baokuan=addLocalUrl($baokuan,'shijiu');
 $rem=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell',"code='zhidemai'  ORDER BY id desc Limit 0,12 ");
+$rem=addLocalUrl($rem,'zhidemai');
 $dae=$duoduo->select_all('goods','id,title,quan_price,url,img,price,sell,endtime',"code='jd'  ORDER BY id desc Limit 0,4 ");
+$dae=addLocalUrl($dae,'jd');
 $t=array();
 foreach($bankuai as $key=>$vo){
-	if($key==0){
-		if($vo['huodong_time']){
-			$vo['huodong_etime']=strtotime(date('Y-m-d '.$vo['huodong_time'].":00:00",TIME))+24*3600;
-		}
-		$first_bankuai=$vo;
-		$web_cid=$vo['web_cid'];
-	}
-	if(!in_array($vo['bankuai_tpl'],$t)){
-		$css[]=TPLURL."/goods/".$vo['bankuai_tpl']."/css/list.css";
-		$t[]=$vo['bankuai_tpl'];
-	}
+    if($key==0){
+        if($vo['huodong_time']){
+            $vo['huodong_etime']=strtotime(date('Y-m-d '.$vo['huodong_time'].":00:00",TIME))+24*3600;
+        }
+        $first_bankuai=$vo;
+        $web_cid=$vo['web_cid'];
+    }
+    if(!in_array($vo['bankuai_tpl'],$t)){
+        $css[]=TPLURL."/goods/".$vo['bankuai_tpl']."/css/list.css";
+        $t[]=$vo['bankuai_tpl'];
+    }
 }
 $web_cid=unserialize($web_cid);
 if($web_cid){
-	$where="id in(".implode(',',$web_cid).")";
+    $where="id in(".implode(',',$web_cid).")";
 }else{
-	$where=" tag='goods' ";
+    $where=" tag='goods' ";
 }
 if(!empty($web_cid)){
-	$goods_type=$duoduo->select_all("type","id,title",$where."  order by sort=0 asc,sort asc,id desc");
+    $goods_type=$duoduo->select_all("type","id,title",$where."  order by sort=0 asc,sort asc,id desc");
 //	获取到商品类型的时候，给商品类型数组添加商品地址链接
     foreach($goods_type as $k=>$vo){
         $canshu=array();
@@ -65,7 +68,7 @@ if(!empty($web_cid)){
 }
 $yugao_time=date('Y-m-d '.$first_bankuai['yugao_time'].":00");
 if(strtotime($yugao_time)>TIME){
-	$yugao_close=true;
+    $yugao_close=true;
 }
 
 $css[]=TPLURL."/inc/css/index.css";
@@ -76,45 +79,45 @@ include(TPLPATH.'/inc/header.tpl.php');
 <script src="js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/scrollpagination.js"></script>
 <script>
-$(function(){
-	fixDiv('#ddlanmu .ddlanmu_c',0);
-	countDown('.count_down');
-});
+    $(function(){
+        fixDiv('#ddlanmu .ddlanmu_c',0);
+        countDown('.count_down');
+    });
 </script>
 <div class="mainbanner">
-	<div class="mainbanner_window">
-		<ul id="slideContainer">
-		<?php foreach($slides as $row){?>
-<li> <a href="<?=$row['url']?>" target="_blank" rel="nofollow"><img src="<?=$row['img']?>" width="1920" height="420" /></a></li>
- <?php }?></ul>
+    <div class="mainbanner_window">
+        <ul id="slideContainer">
+            <?php foreach($slides as $row){?>
+                <li> <a href="<?=$row['url']?>" target="_blank" rel="nofollow"><img src="<?=$row['img']?>" width="1920" height="420" /></a></li>
+            <?php }?></ul>
 
+    </div>
+    <ul class="mainbanner_list">
+        <li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li>	</ul>
+    <div class="hdpads"> <a href="/" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="200" /></a>
+        <a href="" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="190" style="margin-top:10px" /></a></div>
+    <div class="guanbihdp"></div>
 </div>
-	<ul class="mainbanner_list">
-		 <li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li>	</ul>
-	<div class="hdpads"> <a href="/" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="200" /></a>
-	 <a href="" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="190" style="margin-top:10px" /></a></div>
-	 <div class="guanbihdp"></div>
- </div>
 <div class="slogon">
     <img src="/upload/slogo.png" width="1200"  />
 </div>
- 
- <div class="main-title" id="qiang">
-     <a class="limit" >限时抢购</a>
-      </div>
-	    <div class="t-0"> 
-		<div class="t-0left"><?=AD(cx)?></div>  
-		<div class="t-0right"> 
-	         <div class="ads0"> 
-	          <?=AD(cx1)?>
-	          <?=AD(cx2)?>
-			  <?=AD(cx3)?>
-<?=AD(cx4)?>		
-	        </div>  
-	     </div>  
-	</div>  
 
-	 <div class="clear"></div>
+<div class="main-title" id="qiang">
+    <a class="limit" >限时抢购</a>
+</div>
+<div class="t-0">
+    <div class="t-0left"><?=AD(cx)?></div>
+    <div class="t-0right">
+        <div class="ads0">
+            <?=AD(cx1)?>
+            <?=AD(cx2)?>
+            <?=AD(cx3)?>
+            <?=AD(cx4)?>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
 <div class="main-title" id="baokuan">
     <p class='lg'>爆款推荐</p>
     <p class="sm">EXPLOSION RECOMMENDATION</p>
@@ -122,7 +125,7 @@ $(function(){
 
 
 <div class="block-jxhh">
-    <div class="hot-words title-div"><div class="title-text"><font size="+5" style="vertical-align: top;">●</font> 精选好货 <div class="title-text2">SELECT GOOD GOODS</div></div>
+    <div class="hot-words title-div"><div class="title-text"><font size="+5" style="vertical-align: top;">●</font> 爆款推荐 <div class="title-text2">SELECT GOOD GOODS</div></div>
 
         <div class="title-hot-words">
 
@@ -134,20 +137,19 @@ $(function(){
 
 <div class="rexiao_list">
     <ul>
-    <?php
-    foreach($baokuan as $row){
-    ?>
-    <li>
-        <div class="goods_pic img"><a href="<?=$row['url']?>" target="_blank"><img data-original="<?=$row['img']?>" src="images/lazy.gif"  /></a></div>
-        <div class="goods_info">
-            <div class="goods_tit"><a href="" target="_blank"><?=$row['title']?></a></div>
-            <div class="goods_price_coupon">
-                <span class="goods_price"><b>￥</b><?=$row['quan_price']?><em>券后 <span class="fr" style="margin-top:5px">热销<?=$row['sell']?>件</span></em></span></span>
-            </div>
-
-        </div>
-    </li>
-    <?php }?>
+        <?php
+        foreach($baokuan as $row){
+            ?>
+            <li>
+                <div class="goods_pic img"><a href="<?=$row['url']?>" target="_blank"><img data-original="<?=$row['img']?>" src="images/lazy.gif"  /></a></div>
+                <div class="goods_info">
+                    <div class="goods_tit"><a href="" target="_blank"><?=$row['title']?></a></div>
+                    <div class="goods_price_coupon">
+                        <span class="goods_price"><b>￥</b><?=$row['quan_price']?><em>券后 <span class="fr" style="margin-top:5px">热销<?=$row['sell']?>件</span></em></span></span>
+                    </div>
+                </div>
+            </li>
+        <?php }?>
 
     </ul>
 
@@ -171,17 +173,16 @@ $(function(){
 
             <div class="pos-box">
                 <div class="pos-goods-list bot">
-                <?php
-                foreach($rem as $row){
-                ?>
-
-                    <a class="pos-goods cnzzCounter"  href="<?=$row['url']?>" target="_blank">
-                        <img  src="<?=$row['img']?>" />
-                        <div class="bt1"> <?=$row['title']?></div>
-                        <div class="bt2"> 券后价：<font>&yen;</font><span><?=$row['quan_price']?></span></div>
-                        <div class="bt2" style="color:#999;">已抢购<?=$row['sell']?> 件</div>
-                    </a>
-                <?php }?>
+                    <?php
+                    foreach($rem as $row){
+                        ?>
+                        <a class="pos-goods cnzzCounter"  href="<?=$row['url']?>" target="_blank">
+                            <img  src="<?=$row['img']?>" />
+                            <div class="bt1"> <?=$row['title']?></div>
+                            <div class="bt2"> 券后价：<font>&yen;</font><span><?=$row['quan_price']?></span></div>
+                            <div class="bt2" style="color:#999;">已抢购<?=$row['sell']?> 件</div>
+                        </a>
+                    <?php }?>
 
                 </div>
 
@@ -221,35 +222,35 @@ $(function(){
     <ul class="goods_items">
         <?php
         foreach($dae as $row){
-        ?>
-        <li>
-            <div class="list-good">
-                <div class="big_list">
-                    <a href="<?=$row['url']?>" target="_blank">
+            ?>
+            <li>
+                <div class="list-good">
+                    <div class="big_list">
+                        <a href="<?=$row['url']?>" target="_blank">
 	                                <span class="pic">
 										<img   src="<?=$row['img']?>"  alt="祖玛珑夏季新款休闲裤男运动裤薄款男裤弹力冰丝空调裤凉凉九分裤" />
 									</span></a>
-                    <div class="right">
-                        <div class="title yahei">
-                            <div title="淘宝" class="tb"><i></i></div>                                       			                        <?=$row['title']?></div>
-                        <div class="money_bg">
-                            <div class="f_money2">优惠券 <span>500</span> 元  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="right">
+                            <div class="title yahei">
+                                <div title="淘宝" class="tb"><i></i></div>                                       			                        <?=$row['title']?></div>
+                            <div class="money_bg">
+                                <div class="f_money2">优惠券 <span>500</span> 元  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
-                            <div class="f_money3">销售额：<span><?=$row['sell']?></span>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </div>
+                                <div class="f_money3">销售额：<span><?=$row['sell']?></span>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
 
-                            <div class="price mt-15 pb-5">
-                                <span class="l f-16 ml-20">劵后价：</span>
-                                <span class="l mr-5 mt-5">¥</span>
-                                <span class="l real"><?=$row['quan_price']?>					 </span>
-                            </div>
-                            <p class="buy"> <a class="left1" href="<?=$row['url']?>"  title="先领券再下单" target="_blank">点我领券——立省500元</a></p>
+                                <div class="price mt-15 pb-5">
+                                    <span class="l f-16 ml-20">劵后价：</span>
+                                    <span class="l mr-5 mt-5">¥</span>
+                                    <span class="l real"><?=$row['quan_price']?>					 </span>
+                                </div>
+                                <p class="buy"> <a class="left1" href="<?=$row['url']?>"  title="先领券再下单" target="_blank">点我领券——立省500元</a></p>
 
 
 
-                        </div>	</div>
-                </div>
-            </div></li>
+                            </div>	</div>
+                    </div>
+                </div></li>
         <?php }?>
 
     </ul></div>
@@ -291,13 +292,13 @@ $(function(){
 
             <ul>
                 <?php foreach($malls as $row){?>
-                <li>
-                    <a href="<?=$row['view']?>" target="_blank">
-                        <img alt="京东商城"  src="<?=$row['img']?>" style="width:120px;height:55px; display:block;margin:5px auto;">
-                        <p>最高奖励 <font color="#f43556"><B> <?=$row['fan']?></B></font></p>
-                    </a>
+                    <li>
+                        <a href="<?=$row['view']?>" target="_blank">
+                            <img alt="京东商城"  src="<?=$row['img']?>" style="width:120px;height:55px; display:block;margin:5px auto;">
+                            <p>最高奖励 <font color="#f43556"><B> <?=$row['fan']?></B></font></p>
+                        </a>
 
-                </li>
+                    </li>
                 <?php }?>
             </ul>
         </div>
@@ -313,88 +314,73 @@ $(function(){
 
 <div class="wrap-rx" style="margin-top:15px" id="xihuan">
     <div class="main-title">
-<p class='lg'>猜你喜欢</p>
-<p class="sm">GUESS YOU LIKE</p>
-</div>
+        <p class='lg'>猜你喜欢</p>
+        <p class="sm">GUESS YOU LIKE</p>
+    </div>
 
     <div class="rx-list-wrapper">
-  <div class="fixed-outer">
-    <div class="rx-list-fixed" data-bk="rx_hot_words">
-      <ul class="rx-list clearfix">
-<!--          <div class="jy_auto">-->
-<!--              <div class="jy_nav" id="_nav">-->
-<!--                  <div class="up_fenlei">-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu#fl">全部</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10001#fl">女装</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10002#fl">鞋包</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10003#fl">美妆</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10004#fl">美食</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10005#fl">母婴</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10006#fl">居家</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10007#fl">数码</a>-->
-<!--                      <a href="http://localhost:8088/index.php?mod=goods&amp;act=index&amp;code=jiu&amp;cid=10008#fl">其他</a>-->
-<!--                  </div>-->
-<!--              </div>-->
-<!--          </div>-->
-          <?php if(empty($bankuai_code)||$bankuai['fenlei']==1||$bankuai['yugao']==1){?>
-              <div class="jy_auto">
-                  <?php if($goods_type||$first_bankuai['yugao']==1){?>
-                      <div class="jy_nav" id="<?=$first_bankuai['code']?>_nav">
-                          <?php
-                          if(($bankuai['fenlei']==1 || $_GET['code']=='')&&$goods_type){
-                              $url_canshu=array("code"=>$bankuai_code);
-                              if($_GET['do']!=''){
-                                  $url_canshu['cid']=0;
-                                  $url_canshu['do']=$_GET['do'];
-                              }
-                              ?>
-                              <div class="up_fenlei">
-                                  <a <?php if(empty($_GET['cid'])){?>class="cur"<?php }?> href="<?=u('goods','index',$url_canshu)?>#fl">全部</a>
-                                  <?php foreach($goods_type as $k=>$vo){?>
-                                      <a href="<?=$vo['url']?>#fl" <?php if($_GET['cid']==$vo['id']){?>class="cur c_border"<?php }?>><?=$vo['title']?></a>
-                                  <?php }?>
-                              </div>
-                          <?php }?>
-                      </div>
-                  <?php }?>
-              </div>
-          <?php }?>
-      </ul>
+        <div class="fixed-outer">
+            <div class="rx-list-fixed" data-bk="rx_hot_words">
+                <ul class="rx-list clearfix">
+                    <?php if(empty($bankuai_code)||$bankuai['fenlei']==1||$bankuai['yugao']==1){?>
+                        <div class="jy_auto">
+                            <?php if($goods_type||$first_bankuai['yugao']==1){?>
+                                <div class="jy_nav" id="<?=$first_bankuai['code']?>_nav">
+                                    <?php
+                                    if(($bankuai['fenlei']==1 || $_GET['code']=='')&&$goods_type){
+                                        $url_canshu=array("code"=>$bankuai_code);
+                                        if($_GET['do']!=''){
+                                            $url_canshu['cid']=0;
+                                            $url_canshu['do']=$_GET['do'];
+                                        }
+                                        ?>
+                                        <div class="up_fenlei">
+                                            <a <?php if(empty($_GET['cid'])){?>class="cur"<?php }?> href="<?=u('goods','index',$url_canshu)?>#fl">全部</a>
+                                            <?php foreach($goods_type as $k=>$vo){?>
+                                                <a href="<?=$vo['url']?>#fl" <?php if($_GET['cid']==$vo['id']){?>class="cur c_border"<?php }?>><?=$vo['title']?></a>
+                                            <?php }?>
+                                        </div>
+                                    <?php }?>
+                                </div>
+                            <?php }?>
+                        </div>
+                    <?php }?>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
 
 
-		    <div class="rexiao_guang">
-           <?php
-	foreach($bankuai as $key=>$vo){
-?>
+<div class="rexiao_guang">
+    <?php
+    foreach($bankuai as $key=>$vo){
+    ?>
 
-        <?php if($key==0){
-	$bankuai_tpl=$vo['bankuai_tpl'];
-	$bankuai_code=$vo['code'];
- 	include(TPLPATH."/goods/".$bankuai_tpl."/list.tpl.php");
-}
-?>
-           </div>
-		   <?php }?>
-       
-	 
- </div> 
+    <?php if($key==0){
+        $bankuai_tpl=$vo['bankuai_tpl'];
+        $bankuai_code=$vo['code'];
+        include(TPLPATH."/goods/".$bankuai_tpl."/list.tpl.php");
+    }
+    ?>
+</div>
+<?php }?>
 
-<script src="/hdp.js" type="text/javascript"></script> 
+
+</div>
+
+<script src="/hdp.js" type="text/javascript"></script>
 <?php
 $a=$url_arr;
 $a['code']=trim($_GET['code']);
 $contentData=json_encode($a);
 ?>
 <script>
-$(function() {
-$("img").lazyload({
-		effect : "fadeIn"
-	});
-});
+    $(function() {
+        $("img").lazyload({
+            effect : "fadeIn"
+        });
+    });
     (function(){
         // 领券箭头移动
         var direction='right';
@@ -479,43 +465,43 @@ $("img").lazyload({
 
 </script>
 <style type="text/css">
-.ysbj{width:100%;}
-.kjdh{ position:fixed; right:100px; top:180px;width:60px; }
-.kjdh a{ font-size:14px; margin-bottom:5px;color:#000000;border-radius: 50%;cursor:pointer}
-.kjdh a span{float:left;}
-.kjdh a .fldh{float:left; font-size:14px; margin:0px 0 0 22px}
-.kjdh a .banben{float:left; font-size:12px; margin-bottom:5px;width:28px; height:28px; color:#ffffff;}
-.fldh1:hover,.fldh2:hover,.fldh3:hover,.fldh4:hover,.fldh5:hover,.fldh6:hover,.fldh7:hover,.fldh8:hover,.fldh9:hover,.fldh10:hover{background:#000;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh1{background:#FF5151;width:28px; height:28px;border-radius: 50%;  display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh2{background:#2894FF;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh3{background:#02C874;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh4{background:#FF77FF;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh5{background:#00BB00;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh6{background:#AD5A5A;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh7{background:#EA7500;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh8{background:#A5A552;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh9{background:#999999;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
-#fldh,.fldh10{background:#666666;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    .ysbj{width:100%;}
+    .kjdh{ position:fixed; right:100px; top:180px;width:60px; }
+    .kjdh a{ font-size:14px; margin-bottom:5px;color:#000000;border-radius: 50%;cursor:pointer}
+    .kjdh a span{float:left;}
+    .kjdh a .fldh{float:left; font-size:14px; margin:0px 0 0 22px}
+    .kjdh a .banben{float:left; font-size:12px; margin-bottom:5px;width:28px; height:28px; color:#ffffff;}
+    .fldh1:hover,.fldh2:hover,.fldh3:hover,.fldh4:hover,.fldh5:hover,.fldh6:hover,.fldh7:hover,.fldh8:hover,.fldh9:hover,.fldh10:hover{background:#000;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh1{background:#FF5151;width:28px; height:28px;border-radius: 50%;  display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh2{background:#2894FF;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh3{background:#02C874;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh4{background:#FF77FF;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh5{background:#00BB00;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh6{background:#AD5A5A;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh7{background:#EA7500;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh8{background:#A5A552;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh9{background:#999999;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
+    #fldh,.fldh10{background:#666666;width:28px; height:28px;border-radius: 50%; display:block; padding:10px 7px 10px 13px;color:#FFFFFF}
 
 </style>
 
 <div class="clear"></div>
 <div class="daohang-top">
-<div class="kjdh">
-<a href="#qiang" class="fldh1"><span class="banben">限时抢购</span></a>
-<a href="#baokuan" class="fldh2"><span class="banben">爆款推荐</span></a>
-<a href="#kuaixun" class="fldh3"><span class="banben">最新快讯</span></a>
-<a href="#quan" class="fldh4"><span class="banben">大额好券</span></a>
-<a href="#pinpai" class="fldh5"><span class="banben">品牌专区</span></a>
-<a href="#xihuan" class="fldh6"><span class="banben">猜您喜欢</span></a>
-<a href="/index.php?mod=hezuo&act=index" class="fldh7" target="_blank"><span class="banben">商家合作</span></a> 
-</br>
-<a id="kefu1" class="fldh9"><span class="banben">在线客服</span></a>
-<a href="javascript:void(0);" onClick="window.scrollTo(0,0)" class="fldh10"><span class="banben">TOP顶部</span></a>
+    <div class="kjdh">
+        <a href="#qiang" class="fldh1"><span class="banben">限时抢购</span></a>
+        <a href="#baokuan" class="fldh2"><span class="banben">爆款推荐</span></a>
+        <a href="#kuaixun" class="fldh3"><span class="banben">最新快讯</span></a>
+        <a href="#quan" class="fldh4"><span class="banben">大额好券</span></a>
+        <a href="#pinpai" class="fldh5"><span class="banben">品牌专区</span></a>
+        <a href="#xihuan" class="fldh6"><span class="banben">猜您喜欢</span></a>
+        <a href="/index.php?mod=hezuo&act=index" class="fldh7" target="_blank"><span class="banben">商家合作</span></a>
+        </br>
+        <a id="kefu1" class="fldh9"><span class="banben">在线客服</span></a>
+        <a href="javascript:void(0);" onClick="window.scrollTo(0,0)" class="fldh10"><span class="banben">TOP顶部</span></a>
 
+    </div>
 </div>
-</div>
-<div class="clear"></div> 
+<div class="clear"></div>
 
 
 <?php include(TPLPATH.'/inc/footer.tpl.php');?>
