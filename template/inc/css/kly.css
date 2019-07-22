@@ -4915,7 +4915,6 @@ h3 {
     height: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    font-family: "微软雅黑";
     padding: 0 0 0 0;
     text-align: center;
     line-height: 39px;
@@ -9231,4 +9230,52 @@ s {
     padding: 0 11px;;
     *height: 10px;
     *line-height: 10px;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop {
+    border-top: #EE113D 2px solid;
+    border-bottom: #EE113D 2px solid;
+    border-left: #EE113D 2px solid;
+    border-right: #EE113D 2px solid;
+    position: absolute;
+    height: 396px;
+    background-color: #fcfcfc;
+    width: 240px;
+    display: none;
+    border-top: medium none;
+    top: 5px;
+    padding: 10px 10px;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dl {
+    padding-bottom: 0;
+    color: #666666;
+    padding-top: 0
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dl:hover {
+    background-color: #DCDCDC;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dl a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    text-decoration-line: underline;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dl a.un {
+    color: #666666
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dt {
+    padding-left: 0;
+}
+
+.tb-categories .tb-cat-inner ul li:hover .menu_pop {
+    display: block;
+    top: 2px;
+    left: 239px
 }
