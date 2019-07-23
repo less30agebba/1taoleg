@@ -19,7 +19,7 @@ if(defined('VIEW_PAGE')||$_GET['page']<=1){
 <div class="goods_price_coupon"> 
  <span class="goods_price"><span class="fl" style="color:#000"> <b>￥</b><?=$row['price']?></span><em> <span class="fr quan"><span class="lq">领券</span><span class="jian">再减<?=$row['price']-$row['discount_price']?>元</span></span></em></span></span>
 </div> 
-<div class="goods_tit"><a href="" target="_blank"><?=$row['title']?></a></div> 
+<div class="goods_tit"><a href="<?=$row['url']?>" target="_blank"><?=$row['title']?></a></div>
 </div>
 <div class="qiangquan"><span class="fl quanhou">券后￥<font><?=$row['discount_price']?></font></span> <span class="fr qiang">销量： <font><?=$row['sell']?></font></span></span>
 </div> 
