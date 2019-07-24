@@ -145,7 +145,7 @@ include(TPLPATH.'/inc/header.tpl.php');
                 <div class="goods_info">
                     <div class="goods_tit"><a href="<?=$row['url']?>" target="_blank"><?=$row['title']?></a></div>
                     <div class="goods_price_coupon">
-                        <span class="goods_price"><b>￥</b><?=$row['quan_price']?><em>券后 <span class="fr" style="margin-top:5px">热销<?=$row['sell']?>件</span></em></span></span>
+                        <span class="goods_price"><b>￥</b><?=$row['quan_price']>999?round($row['quan_price']):$row['quan_price']?><em>券后 <span class="fr" style="margin-top:5px">热销<?=$row['sell']?>件</span></em></span></span>
                     </div>
                 </div>
             </li>

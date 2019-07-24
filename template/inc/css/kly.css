@@ -1583,7 +1583,9 @@ a.red:link, a.red:visited, .red {
 .rexiao_list ul li .goods_info .goods_price_coupon .goods_price {
     color: #f43556;
     font-size: 20px;
-    font-weight: 700
+    font-weight: 700;
+    width: 128px;
+    text-overflow: ellipsis;
 }
 
 .rexiao_list ul li .goods_info .goods_price_coupon .goods_price .quan {
@@ -1598,7 +1600,7 @@ a.red:link, a.red:visited, .red {
     font-size: 16px;
     line-height: 18px;
     top: 2px;
-    font-weight: 300
+    font-weight: 300;
 }
 
 .rexiao_list ul li .goods_info .goods_price_coupon .goods_price em {
@@ -9187,7 +9189,7 @@ s {
 }
 
 .c_bgcolor a.anav:hover {
-    background: #f8f8f8;
+    background: #ff8800;
 }
 
 .c_hborder, .dddefault #navc a.sub_on {
@@ -9233,14 +9235,11 @@ s {
 }
 
 .tb-categories .tb-cat-inner ul li .menu_pop {
-    border-top: #EE113D 2px solid;
-    border-bottom: #EE113D 2px solid;
-    border-left: #EE113D 2px solid;
-    border-right: #EE113D 2px solid;
+    overflow:hidden;
     position: absolute;
-    height: 396px;
+    height: 400px;
     background-color: #fcfcfc;
-    width: 240px;
+    width: 710px;
     display: none;
     border-top: medium none;
     top: 5px;
@@ -9253,17 +9252,14 @@ s {
     padding-top: 0
 }
 
-.tb-categories .tb-cat-inner ul li .menu_pop dl:hover {
-    background-color: #DCDCDC;
+.tb-categories .tb-cat-inner ul li .menu_pop dd:hover {
+    background-color: #f3f3f3
 }
 
 .tb-categories .tb-cat-inner ul li .menu_pop dl a {
     font-family: Arial, Helvetica, sans-serif;
     color: #666666;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 15px;
-    text-decoration-line: underline;
+    font-size: 14px;
 }
 
 .tb-categories .tb-cat-inner ul li .menu_pop dl a.un {
@@ -9272,6 +9268,44 @@ s {
 
 .tb-categories .tb-cat-inner ul li .menu_pop dt {
     padding-left: 0;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop a span.text2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 14px;
+    border-radius:2px;
+    background: linear-gradient(-90deg,#f082c5,#fbaa58);
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop a {
+    float: left;
+    display: inline;
+    font-size: 13px;
+    line-height: 16px;
+    height: 16px;
+    margin: 8px 0;
+    padding: 0 15px;
+    border-right: #666666 1px solid;
+}
+
+.tb-categories .tb-cat-inner ul li .menu_pop dd {
+    float: left;
+    padding-left: 5px;
+}
+
+.jiange {
+    height: 6px;
+    margin-bottom: 4px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #ddd;
+    width: 685px;
+    *border-bottom-width: 1px;
+    *border-bottom-style: dotted;
+    *border-bottom-color: #ddd;
+    overflow: hidden;
+    *margin: 2px 3px 3px 3px;
 }
 
 .tb-categories .tb-cat-inner ul li:hover .menu_pop {
