@@ -217,7 +217,7 @@
                                     <a target="_blank" href="index.php?mod=goods&act=index&cid=10001" class="biaotis">潮流女装</a>
                                     <div class="menu_pop">
                                         <a target="_blank"
-                                                   href="http://www.1taob.com/index.php?mod=tao&amp;act=list&amp;q=%E5%A5%B3%E5%A3%AB%E4%B8%8A%E8%A3%85"><span
+                                                   href="/index.php?mod=tao&amp;act=list&amp;q=%E5%A5%B3%E5%A3%AB%E4%B8%8A%E8%A3%85"><span
                                                             class="text2">女士上装</span></a>
                                                 <a target="_blank"
                                                    href="/index.php?mod=tao&amp;act=list&amp;q=%E9%9B%AA%E7%BA%BA%E8%A1%AB"><span

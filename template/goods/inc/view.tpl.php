@@ -60,7 +60,7 @@ $(function(){
               <?php }?>
               <?php if($goods['is_fanli_ico']){?>
               <div class="tp_bq tp_3">
-              <span>高额返利</span>
+              <span>高额优惠</span>
               </div>
               <?php }?>
             </div>
@@ -72,24 +72,24 @@ $(function(){
 					 <?php }else{?>
 					<div class="orange-wrap c_bgcolor">
 					<?php }?>
-                        <p class="real-price"><span class="money-sign">￥</span><?=number_format($goods['discount_price'],1)?>&nbsp;    <?php if(isset($goods['price']) && $goods['price']>0){?><span id="yuanjia"  style="text-decoration:line-through; margin-top:-5px; font-size:15px">原价：<span><?=number_format($goods['price'],1)?></span> 元</span><?php }?></p>
+                        <p class="real-price"><span class="money-sign">￥</span><?=$goods['discount_price']>999?round($goods['discount_price']):$goods['discount_price']?>&nbsp;    <?php if(isset($goods['price']) && $goods['price']>0){?><span id="yuanjia"  style="text-decoration:line-through; margin-top:-5px; font-size:15px">原价：<span><?=number_format($goods['price'],1)?></span> 元</span><?php }?></p>
                         <span class="buy-button"> <?php if($goods['is_starttime']){?><span style="font-size:14px"><?=$goods['starttime_tag']?>开抢</span><?php }else{?> 去抢购	<?php }?></span>
                     </div>
                 </a>
                                 <div class="pink-wrap">
 								<?php if($dd_tpl_data['fanli-kg']['open']==0){?>
-              <span class="org-price">返利三步：<span class="orange-text">①</span> 去抢购==<span class="orange-text">②</span> <?php if($goods['laiyuan_type']==3){?>京东购买<?php }else{?>到淘宝购买<?php }?>==<span class="orange-text">③</span> 确认收货回来拿返利！</span> <?php }else{?>
-              <span class="org-price">返利三步：<span class="orange-text">①</span> 去抢购==<span class="orange-text">②</span> <?php if($goods['laiyuan_type']==3){?>京东购买<?php }else{?>进入淘宝<?php }?>==<span class="orange-text">③</span> 按正常购物流程购买！</span><?php }?>
+              <span class="org-price">优惠三步：<span class="orange-text">①</span> 去抢购==<span class="orange-text">②</span> <?php if($goods['laiyuan_type']==3){?>京东购买<?php }else{?>到淘宝购买<?php }?>==<span class="orange-text">③</span> 确认收货回来拿积分！</span> <?php }else{?>
+              <span class="org-price">优惠三步：<span class="orange-text">①</span> 去抢购==<span class="orange-text">②</span> <?php if($goods['laiyuan_type']==3){?>京东购买<?php }else{?>进入淘宝<?php }?>==<span class="orange-text">③</span> 按正常购物流程购买！</span><?php }?>
 			
                 </div>   
 			
-                <div class="center-wrap">   <?php if(FANLI==1){?><span style="font-size:21px; height:35px;line-height:55px; margin-top:10px; color:#FF0000"<?php if($goods['fanli']>0){?>title="购买后返<?=$goods['fanli'].$goods['unit']?>"<?php }?>><?php if($goods['fanli']==0){?>
- <h1><span class="orange-text" style="font-size:20px">确认收货后回到 <a href="/index.php?mod=user&act=tradelist&do=taobao" target="_blank"><font color="#0099CC" style="font-size:20px">我的订单</font> </a>查看<?php if($dd_tpl_data['fanli-kg']['open']==0){?>返利<?php }?></span></h1><?php }else{?> 
+                <div class="center-wrap">   <?php if(FANLI==1){?><span style="font-size:21px; height:35px;line-height:55px; margin-top:10px; color:#FF0000"<?php if($goods['fanli']>0){?>title="购买后得<?=$goods['fanli'].$goods['unit']?>"<?php }?>><?php if($goods['fanli']==0){?>
+ <h1><span class="orange-text" style="font-size:20px">确认收货后回到 <a href="/index.php?mod=user&act=tradelist&do=taobao" target="_blank"><font color="#0099CC" style="font-size:20px">我的订单</font> </a>查看<?php if($dd_tpl_data['fanli-kg']['open']==0){?>优惠<?php }?></span></h1><?php }else{?>
  
 <?php if($dd_tpl_data['fanli-kg']['open']==0){?>
-购买后返:<font size="+3"><strong><?=$goods['fanli']?></strong></font> <?php if($goods['laiyuan_type']==3){?>元<?php }else{?><?=TBMONEY?><?php }?> 
+购买后得:<font size="+3"><strong><?=$goods['fanli']?></strong></font> <?php if($goods['laiyuan_type']==3){?>元<?php }else{?><?=TBMONEY?><?php }?>
 <?php }else{?>
-购买后有返利<font size="+3"><strong></strong></font>
+购买后有优惠<font size="+3"><strong></strong></font>
 <?php }?> 
 <?php }?></span><?php }?> <script type="text/javascript">function copyUrl2(){var Url2=document.getElementById("biao1");Url2.select(); document.execCommand("Copy"); alert("已复制好，可贴粘。");}</script> <div class="demo"> <ul>  <li><textarea cols="55" rows="9" id="biao1" class="tg">【商品名称】：<?=$goods['title']?>【原价】：<?=number_format($goods['price'],1)?> 元【优惠价】：<?=number_format($goods['discount_price'],1)?>元包邮秒杀！【下单地址】:http://www.1taoleg.com/index.php?mod=goods&act=view&code=<?=$goods['code']?>&id=<?=$goods['id']?>一淘乐购专享优惠！已抢购 <?=$goods['sell']?> 件！	 </textarea></li><input type="button" class="copy-link"  onClick="copyUrl2()" value="复制推广"></ul></div>
                                      	  <?php if($goods['is_starttime']){?><?php }else{?>   <?php if($goods['sell']>0){?><h1>已有<span class="orange-text"> <?=$goods['sell']?></span> 人在抢购该商品</h1><?php }?> 
@@ -97,8 +97,8 @@ $(function(){
 										<?php if($dd_tpl_data['fanli-kg']['open']==0){?>
 										
                        <?php if(FANLI==1){?>
-                      <img src="/yao.png" alt="<?=$row['name']?>" alt="该商品有返利，请放心购买" title="该商品有返利，请放心购买" /></span>
-						<?php }else{?> <img src="/yao.png" alt="<?=$row['name']?>" alt="该商品有返利，请放心购买" title="该商品有返利，请放心购买" /></span> <?php }?> <?php }else{?> 
+                      <img src="/yao.png" alt="<?=$row['name']?>" alt="该商品有优惠，请放心购买" title="该商品有优惠，请放心购买" /></span>
+						<?php }else{?> <img src="/yao.png" alt="<?=$row['name']?>" alt="该商品有优惠，请放心购买" title="该商品有优惠，请放心购买" /></span> <?php }?> <?php }else{?>
 						<img src="<?=TPLURL?>/inc/images/tao/wfanli.png" alt="<?=$row['name']?>" alt="" title="" />
 						<?php }?> 
 						</div>
