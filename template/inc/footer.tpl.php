@@ -39,9 +39,9 @@ foreach($web_help_title as $k=>$v){
 		</div>
 
 <div class="contact"><div class="dhmc">QQ号码</div>
-		   <div class="dian_ico c_fcolor">745880267</div>
+		   <div class="dian_ico c_fcolor">476219037</div>
 		   <div class="lxkf" style="margin-top:5px">在线客服</div>
-			<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=745880267&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico" title="在线客服"></a>
+			<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476219037&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico" title="在线客服"></a>
         </div>
 	</div>
   </div>  
