@@ -94,8 +94,8 @@ include(TPLPATH.'/inc/header.tpl.php');
     </div>
     <ul class="mainbanner_list">
         <li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li><li><a href="javascript:void(0);"></a></li>	</ul>
-    <div class="hdpads"> <a href="/" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="200" /></a>
-        <a href="" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="190" style="margin-top:10px" /></a></div>
+<!--    <div class="hdpads"> <a href="/" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="200" /></a>-->
+<!--        <a href="" target="_blank" rel="nofollow"><img src="https://image2.suning.cn/uimg/cms/img/154201517865538686.png" width="180" height="190" style="margin-top:10px" /></a></div>-->
     <div class="guanbihdp"></div>
 </div>
 <div class="slogon">
@@ -466,7 +466,7 @@ $contentData=json_encode($a);
 </script>
 <style type="text/css">
     .ysbj{width:100%;}
-    .kjdh{ position:fixed; right:100px; top:180px;width:60px; }
+    .kjdh{ position:fixed; right:80px; top:180px;width:60px; }
     .kjdh a{ font-size:14px; margin-bottom:5px;color:#000000;border-radius: 50%;cursor:pointer}
     .kjdh a span{float:left;}
     .kjdh a .fldh{float:left; font-size:14px; margin:0px 0 0 22px}
