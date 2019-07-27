@@ -57,9 +57,8 @@ foreach($web_help_title as $k=>$v){
 https://aqyzmedia.yunaq.com/labels/label_lg_90030.png
 "></a></div></p>
 <div align="center" style="margin-top:10px;margin-bottom:15px">
-<!--<a href="#" style="line-height:1.5;margin-right:15px"><img src="/zfy.png" /></a>-->
-<a href="#" style="line-height:1.5;margin-right:15px"><img src="http://img01.taobaocdn.com/imgextra/i1/393927512/T2D.OrXtVXXXXXXXXX-393927512.jpg" /></a>
-<a href="#" style="line-height:1.5;margin-right:15px"><img src="http://img04.taobaocdn.com/imgextra/i4/393927512/T2zytmXsBbXXXXXXXX-393927512.jpg" /></a> 
+<a href="#" style="line-height:1.5;margin-right:15px"><img src="/T2D.OrXtVXXXXXXXXX-393927512.jpg" /></a>
+<a href="#" style="line-height:1.5;margin-right:15px"><img src="/T2zytmXsBbXXXXXXXX-393927512.jpg" /></a>
 <a  style="margin-right:15px"  href="#"><img src="https://static.anquan.org/static/outer/image/sm_124x47.png" /></a>
  <a  style=";margin-right:15px"  href="#"><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png" /></a> 
 </div></div>
