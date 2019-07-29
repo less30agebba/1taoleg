@@ -40,10 +40,13 @@ foreach($web_help_title as $k=>$v){
 
 <div class="contact"><div class="dhmc">QQ号码</div>
 		   <div class="dian_ico c_fcolor">476219037</div>
-		   <div class="lxkf" style="margin-top:5px">在线客服</div>
-			<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476219037&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico" title="在线客服"></a>
+		   <div class="lxkf" style="margin-top:5px">售前客服</div>
+               <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476219037&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico" title="售前客服"></a>
+           <div class="shkf" style="margin-top:10px">售后客服</div>
+               <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3365450533&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico1" title="售后客服"></a>
+
+
         </div>
-	</div>
   </div>  
    
 	<div class="clear"></div>	

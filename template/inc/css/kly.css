@@ -5771,8 +5771,19 @@ DIV.page SPAN.disabled {
     width: 180px;
     display: block;
     font-size: 14px;
-    color: #666666;
-    top: 89px;
+    color: #999999;
+    top: 70px;kefu1
+    left: 5px;
+}
+
+.contact .shkf {
+    position: absolute;
+    height: 29px;
+    width: 180px;
+    display: block;
+    font-size: 14px;
+    color: #999999;
+    top: 100px;
     left: 5px;
 }
 
@@ -5782,12 +5793,33 @@ DIV.page SPAN.disabled {
     height: 22px;
     width: 74px;
     display: block;
-    top: 89px;
+    top: 70px;
+    left: 63px;
+    background: url(/template/images/kefu.png);
+}
+.contact .qq_ico1 {
+    position: absolute;
+    margin-left: 10px;
+    height: 22px;
+    width: 74px;
+    display: block;
+    top: 110px;
     left: 63px;
     background: url(/template/images/kefu.png);
 }
 
 .contact .dian_ico {
+    position: absolute;
+    height: 29px;
+    width: 180px;
+    display: block;
+    top: 35px;
+    left: 2px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact .dian_ico_postSale {
     position: absolute;
     height: 29px;
     width: 180px;

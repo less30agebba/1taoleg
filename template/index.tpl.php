@@ -496,7 +496,7 @@ $contentData=json_encode($a);
         <a href="#xihuan" class="fldh6"><span class="banben">猜您喜欢</span></a>
         <a href="/index.php?mod=hezuo&act=index" class="fldh7" target="_blank"><span class="banben">商家合作</span></a>
         </br>
-        <a id="kefu1" class="fldh9"><span class="banben">在线客服</span></a>
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476219037&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" id="kefu1" class="fldh9"><span class="banben">在线客服</span></a>
         <a href="javascript:void(0);" onClick="window.scrollTo(0,0)" class="fldh10"><span class="banben">TOP顶部</span></a>
 
     </div>
