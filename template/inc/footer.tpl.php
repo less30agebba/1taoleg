@@ -38,8 +38,8 @@ foreach($web_help_title as $k=>$v){
 			     <div class="line"></div>
 		</div>
 
-<div class="contact"><div class="dhmc">QQ号码</div>
-		   <div class="dian_ico c_fcolor">476219037</div>
+<div class="contact"><div class="dhmc">客服服务电话</div>
+		   <div class="dian_ico c_fcolor">0591-39010931</div>
 		   <div class="lxkf" style="margin-top:5px">售前客服</div>
                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476219037&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" class="qq_ico" title="售前客服"></a>
            <div class="shkf" style="margin-top:10px">售后客服</div>
