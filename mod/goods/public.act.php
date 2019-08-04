@@ -63,7 +63,6 @@ function act_goods_list($bankuai_code='',$do,$ajax_load_num,$pagesize=10,$page=1
 				$where.=" and title like '%".$contition."%'";
 			}
 		}
-		echo $where;
 	}
 	$data=$goods_class->index_list(array('code'=>$bankuai_code,'cid'=>(int)$cid),$pagesize,$page,$where,$goods_total,$order_by);
 	if($goods_total==1){

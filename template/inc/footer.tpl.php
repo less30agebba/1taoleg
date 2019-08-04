@@ -56,15 +56,19 @@ foreach($web_help_title as $k=>$v){
 </p>
 <p>
 	<span style="font-size:12px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> 
-</p>&nbsp;&nbsp;&nbsp; <a href="http://www.miibeian.gov.cn/" target="_blank">闽ICP备19011600号-1</a>&nbsp;&nbsp;&nbsp;<a  target="cyxyv" target="cyxyv" href="https://v.yunaq.com/certificate?domain=www.1taoleg.com"><img src="
-https://aqyzmedia.yunaq.com/labels/label_lg_90030.png
-"></a></div></p>
+</p></div></p>
 <div align="center" style="margin-top:10px;margin-bottom:15px">
 <a href="#" style="line-height:1.5;margin-right:15px"><img src="/T2D.OrXtVXXXXXXXXX-393927512.jpg" /></a>
 <a href="#" style="line-height:1.5;margin-right:15px"><img src="/T2zytmXsBbXXXXXXXX-393927512.jpg" /></a>
 <a  style="margin-right:15px"  href="#"><img src="https://static.anquan.org/static/outer/image/sm_124x47.png" /></a>
- <a  style=";margin-right:15px"  href="#"><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png" /></a> 
-</div></div>
+ <a  style=";margin-right:15px"  href="#"><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png" /></a>
+    <a  target="cyxyv" target="cyxyv" href="https://v.yunaq.com/certificate?domain=www.1taoleg.com"><img style="width: 124px;height: 47px;" src="https://aqyzmedia.yunaq.com/labels/label_lg_90030.png"></a>
+</div>
+    <div id="beian" style="text-align: center">
+        <a href="http://beian.miit.gov.cn/" target="_blank">闽ICP备19011600号-1</a>
+    </div>
+
+</div>
 <script>
 $.ajax({
 	url: '/index.php?mod=ajax&act=userinfo',
