@@ -3,7 +3,7 @@ include(TPLPATH.'/hezuo/top.tpl.php');
 ?><div  style="margin:0 auto; width:1200px"> 
    <div class="baomingview">
                 <div class="re_content">
-                    <form class="GoodAddform" name="form" id="form" method="post" action="/index.php?mod=hezuo&act=to" target="_blank">
+                    <form class="GoodAddform" name="form" id="form" method="post" action="/index.php?mod=hezuo&act=to">
                         <ul>
                             <li><label>购买方式：</label>
                                 <input name="buytype" type="radio" value="1" checked="checked"> 新购买&nbsp;&nbsp;&nbsp;&nbsp;
