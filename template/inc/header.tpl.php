@@ -86,7 +86,7 @@ unset($js);
 }
 .n-h-list li a:hover{ color:#EE113D;}
 .item-info .orange-wrap {height:92px;background-color:#EE113D;position:relative}
-.contact .dian_ico{ position:absolute;color:#EE113D; height:29px; width:180px;display:block; top:35px; left:2px;font-size: 24px; font-weight: bold; }
+.contact .dian_ico{ position:absolute;color:#EE113D; height:29px; width:180px;display:block; top:35px; left:2px;font-size: 22px; font-weight: bold; }
 
 .goods-list li .good-price .price-current {font-size:40px;font-family:Arial;color:#EE113D;  font-weight:500}
 .goods-list li .good-price .price-current em {font-size: 14px; font-family:"微软雅黑"; color:#EE113D; vertical-align:1px; margin-left:1px;}
