@@ -295,7 +295,7 @@ include(TPLPATH.'/inc/header.tpl.php');
                     <li>
                         <a href="<?=$row['view']?>" target="_blank">
                             <img alt="京东商城"  src="<?=$row['img']?>" style="width:120px;height:55px; display:block;margin:5px auto;">
-                            <p>最高奖励 <font color="#f43556"><B> <?=$row['fan']?></B></font></p>
+                            <p>最高优惠 <font color="#f43556"><B> <?=$row['fan']?></B></font></p>
                         </a>
 
                     </li>
